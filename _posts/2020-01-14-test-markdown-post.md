@@ -97,7 +97,5 @@ key: value
 
 ## Footnotes
 
-## Poop
-
 [^1]: This is the footnote.
 
