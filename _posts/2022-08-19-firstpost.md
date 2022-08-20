@@ -1,6 +1,6 @@
 ---
-title: "First Post"
-description: A brief overview of nothing
+title: "Markdown Post"
+description: Just trying out markdown
 toc: true
 comments: true
 layout: post
@@ -12,7 +12,7 @@ author: Bailey Say
 
 ## Hello
 
-I'm Bailey and this is my first post. 
+I'm Bailey and this is my first markdown post. 
 
 ## What is there to do?
 
