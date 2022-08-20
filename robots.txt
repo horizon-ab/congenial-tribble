@@ -1,1 +1,1 @@
-Sitemap: https://horizon-ab.github.io/congenial-tribble/sitemap.xml
+Sitemap: https://fastpages.fast.ai/sitemap.xml
