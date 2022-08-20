@@ -2,7 +2,7 @@
   
     
         "post0": {
-            "title": "Title",
+            "title": "Python Jupyter Notebook",
             "content": "print(&quot;Hello&quot;) . Hello .",
             "url": "https://horizon-ab.github.io/congenial-tribble/2022/08/19/hellopython.html",
             "relUrl": "/2022/08/19/hellopython.html",
@@ -13,7 +13,7 @@
   
     
         ,"post1": {
-            "title": "Title",
+            "title": "Java Jupyter Notebook",
             "content": "System.out.println(&quot;Hello&quot;); . Hello .",
             "url": "https://horizon-ab.github.io/congenial-tribble/2022/08/19/hellojava.html",
             "relUrl": "/2022/08/19/hellojava.html",
