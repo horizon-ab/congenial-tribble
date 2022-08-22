@@ -18,7 +18,7 @@ I'm Bailey and this is my first markdown post, so I guess I'll talk about comput
 
 Computer Science is pretty interesting. A lot of things use computers nowadays, so it'd be useful to understand the process behind making the software that is so eminent in our lives.
 
-![A Phone](https://www.history.com/news/iphone-original-size-invention-steve-jobs)
+![A Phone](https://www.history.com/.image/t_share/MTU4NDAzMTA4MTM5OTY4NDQ3/gettyimages-74961462.jpg)
 
 ## Goals
 
