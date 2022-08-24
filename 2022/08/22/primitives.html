@@ -132,17 +132,114 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">public</span> <span class="k">class</span> <span class="nc">Primitives</span> <span class="p">{</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
 
-    <span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Primitives</span> <span class="p">{</span>
 
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Scanner</span> <span class="n">input</span><span class="p">;</span>
+        <span class="kt">double</span> <span class="n">firstUnit</span><span class="p">,</span> <span class="n">secondUnit</span><span class="p">;</span>
+        <span class="kt">boolean</span> <span class="n">userConfirm</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">userOption</span><span class="p">;</span>
+
+        <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter your name: &quot;</span><span class="p">);</span>
+        <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+        <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hello &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">&quot;!&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Welcome to the unit convertor!&quot;</span><span class="p">);</span>
+
+        <span class="c1">// Loop of conversions</span>
+        <span class="k">while</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Would you like to convert something (true/false): &quot;</span><span class="p">);</span>
+            <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+            <span class="n">userConfirm</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextBoolean</span><span class="p">();</span>
+            <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">userConfirm</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Here are a list of options below:&quot;</span><span class="p">);</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\t1. Pounds (lbs) to grams (g)&quot;</span><span class="p">);</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\t2. Grams (g) to pounds (lbs)&quot;</span><span class="p">);</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\t3. Feet (ft) to meters (m)&quot;</span><span class="p">);</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\t4. Meters (m) to feet (ft)&quot;</span><span class="p">);</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;What would you like to convert (enter int): &quot;</span><span class="p">);</span>
+                <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+                <span class="n">userOption</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+                <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+
+                <span class="k">switch</span> <span class="p">(</span><span class="n">userOption</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+                        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter the amount in lbs (double): &quot;</span><span class="p">);</span>
+                        <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+                        <span class="n">firstUnit</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+                        <span class="n">secondUnit</span> <span class="o">=</span> <span class="n">firstUnit</span> <span class="o">*</span> <span class="mf">453.592</span><span class="p">;</span>
+                        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">firstUnit</span> <span class="o">+</span> <span class="s">&quot; lbs is &quot;</span> <span class="o">+</span> <span class="n">secondUnit</span> <span class="o">+</span> <span class="s">&quot; g.&quot;</span><span class="p">);</span>
+                        <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+                        <span class="k">break</span><span class="p">;</span>
+
+                    <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
+                        <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+                        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter the amount in g (double): &quot;</span><span class="p">);</span>
+                        <span class="n">firstUnit</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+                        <span class="n">secondUnit</span> <span class="o">=</span> <span class="n">firstUnit</span> <span class="o">*</span> <span class="mf">0.00220462</span><span class="p">;</span>
+                        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">firstUnit</span> <span class="o">+</span> <span class="s">&quot; g is &quot;</span> <span class="o">+</span> <span class="n">secondUnit</span> <span class="o">+</span> <span class="s">&quot; lbs.&quot;</span><span class="p">);</span>
+                        <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+                        <span class="k">break</span><span class="p">;</span>
+
+                    <span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
+                        <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+                        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter the amount in ft (double): &quot;</span><span class="p">);</span>
+                        <span class="n">firstUnit</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+                        <span class="n">secondUnit</span> <span class="o">=</span> <span class="n">firstUnit</span> <span class="o">*</span> <span class="mf">0.3048</span><span class="p">;</span>
+                        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">firstUnit</span> <span class="o">+</span> <span class="s">&quot; ft is &quot;</span> <span class="o">+</span> <span class="n">secondUnit</span> <span class="o">+</span> <span class="s">&quot; m.&quot;</span><span class="p">);</span>
+                        <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+                        <span class="k">break</span><span class="p">;</span>
+
+                    <span class="k">case</span> <span class="mi">4</span><span class="p">:</span>
+                        <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+                        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter the amount in m (double): &quot;</span><span class="p">);</span>
+                        <span class="n">firstUnit</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+                        <span class="n">secondUnit</span> <span class="o">=</span> <span class="n">firstUnit</span> <span class="o">*</span> <span class="mf">3.28084</span><span class="p">;</span>
+                        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">firstUnit</span> <span class="o">+</span> <span class="s">&quot; m is &quot;</span> <span class="o">+</span> <span class="n">secondUnit</span> <span class="o">+</span> <span class="s">&quot; ft.&quot;</span><span class="p">);</span>
+                        <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+                        <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span>
+
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span>
+            
+
+
+            
+        <span class="p">}</span>
+        
     <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="n">Primitives</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">NULL</span><span class="p">);</span>
+<span class="n">Primitives</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Enter your name: 
+Hello help!
+Welcome to the unit convertor!
+Would you like to convert something (true/false): 
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
