@@ -1,5 +1,5 @@
 ---
-title: "Computer Science A Goals"
+title: Computer Science A Goals
 description: Listing my thoughts on AP Comp Sci A and my goals
 toc: true
 comments: true
