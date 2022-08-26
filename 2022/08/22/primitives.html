@@ -149,6 +149,7 @@ window.onload = wrap_img;
         <span class="kt">boolean</span> <span class="n">userConfirm</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">userOption</span><span class="p">;</span>
 
+        <span class="c1">// Takes in String input</span>
         <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter your name: &quot;</span><span class="p">);</span>
         <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
@@ -160,12 +161,15 @@ window.onload = wrap_img;
         <span class="c1">// Loop of conversions</span>
         <span class="k">while</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
 
+            <span class="c1">// Takes in boolean input</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Would you like to convert something (true/false): &quot;</span><span class="p">);</span>
             <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
             <span class="n">userConfirm</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextBoolean</span><span class="p">();</span>
             <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 
             <span class="k">if</span> <span class="p">(</span><span class="n">userConfirm</span><span class="p">)</span> <span class="p">{</span>
+
+                <span class="c1">//Takes in int input</span>
                 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Here are a list of options below:&quot;</span><span class="p">);</span>
                 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\t1. Pounds (lbs) to grams (g)&quot;</span><span class="p">);</span>
                 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\t2. Grams (g) to pounds (lbs)&quot;</span><span class="p">);</span>
@@ -177,6 +181,8 @@ window.onload = wrap_img;
                 <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 
                 <span class="k">switch</span> <span class="p">(</span><span class="n">userOption</span><span class="p">)</span> <span class="p">{</span>
+
+                    <span class="c1">// Lbs to grams</span>
                     <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
                         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter the amount in lbs (double): &quot;</span><span class="p">);</span>
                         <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
@@ -185,7 +191,8 @@ window.onload = wrap_img;
                         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">firstUnit</span> <span class="o">+</span> <span class="s">&quot; lbs is &quot;</span> <span class="o">+</span> <span class="n">secondUnit</span> <span class="o">+</span> <span class="s">&quot; g.&quot;</span><span class="p">);</span>
                         <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
                         <span class="k">break</span><span class="p">;</span>
-
+                    
+                    <span class="c1">// Grams to lbs</span>
                     <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
                         <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
                         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter the amount in g (double): &quot;</span><span class="p">);</span>
@@ -195,6 +202,7 @@ window.onload = wrap_img;
                         <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
                         <span class="k">break</span><span class="p">;</span>
 
+                    <span class="c1">// Ft to m</span>
                     <span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
                         <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
                         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter the amount in ft (double): &quot;</span><span class="p">);</span>
@@ -204,6 +212,7 @@ window.onload = wrap_img;
                         <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
                         <span class="k">break</span><span class="p">;</span>
 
+                    <span class="c1">// M to ft</span>
                     <span class="k">case</span> <span class="mi">4</span><span class="p">:</span>
                         <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
                         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter the amount in m (double): &quot;</span><span class="p">);</span>
