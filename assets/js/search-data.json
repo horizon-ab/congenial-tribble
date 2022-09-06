@@ -24,7 +24,7 @@
   
     
         ,"post2": {
-            "title": "AP CSA Log 2 - Arrays",
+            "title": "AP CSA Log 3 - Arrays",
             "content": "Arrays . Arrays are an important structure to understand, as they appear on the AP Exam as one of the FRQs. But, what exactly are arrays in Java? . Definition . Arrays can store multiples values of a datatype, indicated by the form: . “type[] arrayName;” . Various values can be stored within, making it a useful tool to handle large amounts of data. . For and while loops . Arrays can also be transversed, iterated, and mutated through for and while loops. Using these loops, each element inside the array can be accessed and/or changed somehow. It’s way easier than just using a million variables and going through each one. . To access each value, simply use the square brackets along with the index (which starts from 0). An example of accessing something at index 2 would like like this . “arrayOfNumbers[2];” . Conclusion . Arrays are useful for handling large amounts of data neatly. .",
             "url": "https://horizon-ab.github.io/congenial-tribble/markdown/college%20board/2022/09/05/csalog3.html",
             "relUrl": "/markdown/college%20board/2022/09/05/csalog3.html",
