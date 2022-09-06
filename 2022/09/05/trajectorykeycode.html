@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      5 min read
     
 </span></p>
 
@@ -279,6 +279,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Using-GUI">Using GUI<a class="anchor-link" href="#Using-GUI"> </a></h2><p>InputInitial creates the prompt for the user to enter inputs.</p>
+<p>TrajectoryGraph outputs the graph for the user to visualize.</p>
 
 </div>
 </div>
@@ -348,6 +349,86 @@ window.onload = wrap_img;
             <span class="n">JOptionPane</span><span class="p">.</span><span class="na">showMessageDialog</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="s">&quot;There was an invalid input for &quot;</span> <span class="o">+</span> <span class="n">placeholder</span> <span class="o">+</span> <span class="s">&quot;, please try again. &quot;</span> <span class="o">+</span> <span class="n">e</span><span class="p">,</span> <span class="s">&quot;Unwanted Input&quot;</span><span class="p">,</span> <span class="n">JOptionPane</span><span class="p">.</span><span class="na">WARNING_MESSAGE</span><span class="p">);</span>
             <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
         <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// Below line is unnecessary</span>
+<span class="c1">// package com.hacks.trajectoryCalculator; // maven build</span>
+
+<span class="c1">// import the graphs</span>
+<span class="kn">import</span> <span class="nn">org.jfree.data.function.Function2D</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.jfree.data.general.*</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.jfree.chart.ChartFactory</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.jfree.chart.ChartPanel</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.jfree.chart.JFreeChart</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.jfree.chart.plot.PlotOrientation</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.jfree.data.xy.XYDataset</span><span class="p">;</span>
+
+<span class="c1">// import the other files</span>
+<span class="kn">import</span> <span class="nn">com.hacks.trajectoryCalculator.*</span><span class="p">;</span>
+
+<span class="c1">// import swing and awt</span>
+<span class="kn">import</span> <span class="nn">javax.swing.JFrame</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.awt.Dimension</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TrajectoryGraph</span> <span class="kd">extends</span> <span class="n">JFrame</span> <span class="p">{</span>
+    <span class="c1">// Constructor of the graph that will be displayed</span>
+    <span class="kd">public</span> <span class="nf">TrajectoryGraph</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">InputInitial</span> <span class="n">newInputs</span> <span class="o">=</span> <span class="k">new</span> <span class="n">InputInitial</span><span class="p">();</span> <span class="c1">// start input object from separate file</span>
+        <span class="n">newInputs</span><span class="p">.</span><span class="na">spawnInputs</span><span class="p">();</span> <span class="c1">// start the process of collecting user input</span>
+       <span class="n">drawGraph</span><span class="p">(</span><span class="n">InputInitial</span><span class="p">.</span><span class="na">initialVelocity</span><span class="p">,</span> <span class="n">InputInitial</span><span class="p">.</span><span class="na">initialDegrees</span><span class="p">,</span> <span class="n">InputInitial</span><span class="p">.</span><span class="na">initialHeight</span><span class="p">);</span> <span class="c1">// call method to draw the graph with the user input taken</span>
+    <span class="p">}</span>
+
+    <span class="c1">// graph drawer</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">drawGraph</span><span class="p">(</span><span class="kt">double</span> <span class="n">velocity</span><span class="p">,</span> <span class="kt">double</span> <span class="n">degrees</span><span class="p">,</span> <span class="kt">double</span> <span class="n">height</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Function2D</span> <span class="n">test</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TrajectoryMath</span><span class="p">(</span><span class="n">velocity</span><span class="p">,</span> <span class="n">degrees</span><span class="p">,</span> <span class="n">height</span><span class="p">);</span> <span class="c1">// TrajectoryMath implements function2d, so use those values create new function2d object</span>
+        <span class="n">TrajectoryMath</span> <span class="n">testGetter</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TrajectoryMath</span><span class="p">(</span><span class="n">velocity</span><span class="p">,</span> <span class="n">degrees</span><span class="p">,</span> <span class="n">height</span><span class="p">);</span> <span class="c1">// creates TrajectoryMath object from the other file to call custom methods</span>
+        <span class="n">XYDataset</span> <span class="n">dataset</span> <span class="o">=</span> <span class="n">DatasetUtils</span><span class="p">.</span><span class="na">sampleFunction2D</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">testGetter</span><span class="p">.</span><span class="na">getRoot</span><span class="p">(),</span> <span class="mi">50</span><span class="p">,</span> <span class="s">&quot;Function&quot;</span><span class="p">);</span> <span class="c1">// generates the dataset of xy values with the function</span>
+        <span class="kd">final</span> <span class="n">JFreeChart</span> <span class="n">chart</span> <span class="o">=</span> <span class="n">ChartFactory</span><span class="p">.</span><span class="na">createXYLineChart</span><span class="p">(</span><span class="s">&quot;Trajectory Equation&quot;</span><span class="p">,</span> <span class="s">&quot;X Position (meters)&quot;</span><span class="p">,</span> <span class="s">&quot;Y Position (meters)&quot;</span><span class="p">,</span> <span class="n">dataset</span><span class="p">,</span> <span class="n">PlotOrientation</span><span class="p">.</span><span class="na">VERTICAL</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span> <span class="c1">// creates the actual graph with attributes</span>
+        
+        <span class="c1">// initializing the display</span>
+        <span class="n">ChartPanel</span> <span class="n">cp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ChartPanel</span><span class="p">(</span><span class="n">chart</span><span class="p">)</span> <span class="p">{</span>
+
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="n">Dimension</span> <span class="nf">getPreferredSize</span><span class="p">()</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="k">new</span> <span class="n">Dimension</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">500</span><span class="p">);</span> <span class="c1">// set initial dimension</span>
+            <span class="p">}</span>
+        <span class="p">};</span>
+
+        <span class="c1">// allow mouse wheel scrolling</span>
+        <span class="n">cp</span><span class="p">.</span><span class="na">setMouseWheelEnabled</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+        <span class="n">add</span><span class="p">(</span><span class="n">cp</span><span class="p">);</span>
+
+        <span class="c1">// Finalize the building of the graph</span>
+        <span class="n">setDefaultCloseOperation</span><span class="p">(</span><span class="n">EXIT_ON_CLOSE</span><span class="p">);</span>
+        <span class="n">pack</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+    
+        <span class="c1">// runs the creation of the graph with a queue in a different thread and posts the gui after events are processed</span>
+        <span class="n">java</span><span class="p">.</span><span class="na">awt</span><span class="p">.</span><span class="na">EventQueue</span><span class="p">.</span><span class="na">invokeLater</span><span class="p">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="p">()</span> <span class="p">{</span>
+                <span class="c1">// initialize new TrajectoryGraph object, setvisible to display the graph</span>
+                <span class="k">new</span> <span class="n">TrajectoryGraph</span><span class="p">().</span><span class="na">setVisible</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+        
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
