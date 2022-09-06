@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Trajectory Calculator - Key Code Requirements | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Trajectory Calculator - Key Code Requirements" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://horizon-ab.github.io/congenial-tribble/2022/09/05/trajectorykeycode.html" />
+<meta property="og:url" content="https://horizon-ab.github.io/congenial-tribble/2022/09/05/trajectorykeycode.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-05T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Trajectory Calculator - Key Code Requirements" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-05T00:00:00-05:00","datePublished":"2022-09-05T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Trajectory Calculator - Key Code Requirements","mainEntityOfPage":{"@type":"WebPage","@id":"https://horizon-ab.github.io/congenial-tribble/2022/09/05/trajectorykeycode.html"},"url":"https://horizon-ab.github.io/congenial-tribble/2022/09/05/trajectorykeycode.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/congenial-tribble/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://horizon-ab.github.io/congenial-tribble/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/congenial-tribble/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/congenial-tribble/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/congenial-tribble/search/">Search</a><a class="page-link" href="/congenial-tribble/categories/">Tags</a><a class="page-link" href="/congenial-tribble/notes/">Notes</a><a class="page-link" href="/congenial-tribble/about/">About Me</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Trajectory Calculator - Key Code Requirements</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-05T00:00:00-05:00" itemprop="datePublished">
+        Sep 5, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      4 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/horizon-ab/congenial-tribble/tree/master/_notebooks/2022-09-05-trajectorykeycode.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/congenial-tribble/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/horizon-ab/congenial-tribble/master?filepath=_notebooks%2F2022-09-05-trajectorykeycode.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/congenial-tribble/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/horizon-ab/congenial-tribble/blob/master/_notebooks/2022-09-05-trajectorykeycode.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/congenial-tribble/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fhorizon-ab%2Fcongenial-tribble%2Fblob%2Fmaster%2F_notebooks%2F2022-09-05-trajectorykeycode.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/congenial-tribble/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-09-05-trajectorykeycode.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Using-Math-class">Using Math class<a class="anchor-link" href="#Using-Math-class"> </a></h2><p>TrajectoryCalculator class utilizes the Math class in order to perform operations to find the equation.</p>
+<p>More specifically, it uses Math.pow(), Math.cos(), Math.tan(), and Math.PI.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// The line below isn&#39;t necessary in Jupyter Notebook</span>
+<span class="c1">//package com.hacks.trajectoryCalculator;</span>
+
+<span class="kn">import</span> <span class="nn">org.jfree.data.function.Function2D</span><span class="p">;</span>
+
+<span class="cm">/*</span>
+<span class="cm"> * Actual math for calculating trajectory</span>
+<span class="cm"> * </span>
+<span class="cm"> * Calculates equation as a string</span>
+<span class="cm"> *  </span>
+<span class="cm"> * Returns equation</span>
+<span class="cm"> * </span>
+<span class="cm"> */</span>
+
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">TrajectoryMath</span> <span class="kd">implements</span> <span class="n">Function2D</span> <span class="p">{</span>
+
+    <span class="c1">// Initialize variables</span>
+    <span class="kd">private</span> <span class="kt">double</span> <span class="n">velocity</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">double</span> <span class="n">degrees</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">double</span> <span class="n">height</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">equation</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">double</span> <span class="n">coefficientA</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">double</span> <span class="n">coefficientB</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">double</span> <span class="n">coefficientC</span><span class="p">;</span>
+
+    
+    <span class="c1">// Constructor</span>
+    <span class="kd">public</span> <span class="nf">TrajectoryMath</span><span class="p">(</span><span class="kt">double</span> <span class="n">velocity</span><span class="p">,</span> <span class="kt">double</span> <span class="n">degrees</span><span class="p">,</span> <span class="kt">double</span> <span class="n">height</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">velocity</span> <span class="o">=</span> <span class="n">velocity</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">degrees</span> <span class="o">=</span> <span class="n">degrees</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">height</span> <span class="o">=</span> <span class="n">height</span><span class="p">;</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="na">calculateEquation</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Getters and setters</span>
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getVelocity</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">velocity</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getDegrees</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">degrees</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getHeight</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">height</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getEquation</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">equation</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getCoefficientA</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">coefficientA</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getCoefficientB</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">coefficientB</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getCoefficientC</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">coefficientC</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Gets the root of the equation</span>
+    <span class="c1">// There should be only one positive root, so the method will return that and discard the other</span>
+    <span class="c1">// Returns 0.0 if none is found (which shouldn&#39;t happen usually)</span>
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getRoot</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kt">double</span> <span class="n">rootOne</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="k">this</span><span class="p">.</span><span class="na">coefficientB</span> <span class="o">+</span> <span class="n">Math</span><span class="p">.</span><span class="na">sqrt</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="n">coefficientB</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">4</span> <span class="o">*</span> <span class="p">(</span><span class="o">-</span><span class="k">this</span><span class="p">.</span><span class="na">coefficientC</span><span class="p">)</span> <span class="o">*</span> <span class="k">this</span><span class="p">.</span><span class="na">coefficientA</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="o">-</span><span class="k">this</span><span class="p">.</span><span class="na">coefficientC</span><span class="p">));</span>
+        <span class="kt">double</span> <span class="n">rootTwo</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="k">this</span><span class="p">.</span><span class="na">coefficientB</span> <span class="o">-</span> <span class="n">Math</span><span class="p">.</span><span class="na">sqrt</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="n">coefficientB</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">4</span> <span class="o">*</span> <span class="p">(</span><span class="o">-</span><span class="k">this</span><span class="p">.</span><span class="na">coefficientC</span><span class="p">)</span> <span class="o">*</span> <span class="k">this</span><span class="p">.</span><span class="na">coefficientA</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="o">-</span><span class="k">this</span><span class="p">.</span><span class="na">coefficientC</span><span class="p">));</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">rootOne</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">rootOne</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">rootTwo</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">rootTwo</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="mf">0.0</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setVelocity</span><span class="p">(</span><span class="kt">double</span> <span class="n">velocity</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">velocity</span> <span class="o">=</span> <span class="n">velocity</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setDegrees</span><span class="p">(</span><span class="kt">double</span> <span class="n">degrees</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">degrees</span> <span class="o">=</span> <span class="n">degrees</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setHeight</span><span class="p">(</span><span class="kt">double</span> <span class="n">height</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">height</span> <span class="o">=</span> <span class="n">height</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Array should be in order of velocity, degrees, and height</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setParameters</span><span class="p">(</span><span class="kt">double</span><span class="o">[]</span> <span class="n">values</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">velocity</span> <span class="o">=</span> <span class="n">values</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">degrees</span> <span class="o">=</span> <span class="n">values</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">height</span> <span class="o">=</span> <span class="n">values</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Math for equation</span>
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">calculateEquation</span><span class="p">()</span> <span class="p">{</span>
+
+        <span class="c1">// Calculates coefficients for each part</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">coefficientA</span> <span class="o">=</span> <span class="n">height</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">coefficientB</span> <span class="o">=</span> <span class="n">Math</span><span class="p">.</span><span class="na">tan</span><span class="p">(</span><span class="n">degrees</span> <span class="o">*</span> <span class="n">Math</span><span class="p">.</span><span class="na">PI</span><span class="o">/</span><span class="mi">180</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">coefficientC</span> <span class="o">=</span> <span class="mf">9.8</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="n">velocity</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">cos</span><span class="p">(</span><span class="n">degrees</span> <span class="o">*</span> <span class="n">Math</span><span class="p">.</span><span class="na">PI</span><span class="o">/</span><span class="mi">180</span><span class="p">),</span> <span class="mi">2</span><span class="p">));</span>
+
+        <span class="c1">// Makes string of equation just in case</span>
+        <span class="n">String</span> <span class="n">precheckedEquation</span> <span class="o">=</span> <span class="s">&quot;y = &quot;</span> <span class="o">+</span> <span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">coefficientA</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot; + &quot;</span> <span class="o">+</span> <span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">coefficientB</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot;x - &quot;</span> <span class="o">+</span>
+        <span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">coefficientC</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot;x^2&quot;</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">equation</span> <span class="o">=</span> <span class="n">precheckedEquation</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Returns equation</span>
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getValue</span><span class="p">(</span><span class="kt">double</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">coefficientA</span> <span class="o">+</span> <span class="n">coefficientB</span> <span class="o">*</span> <span class="n">v</span> <span class="o">-</span> <span class="n">coefficientC</span> <span class="o">*</span> <span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="cm">/*</span>
+<span class="cm">     * public static void main(String[] args) {</span>
+<span class="cm">        TrajectoryMath example = new TrajectoryMath(15, 60, 4);</span>
+<span class="cm">        System.out.println(example.getRoot());</span>
+<span class="cm">     }</span>
+<span class="cm">     */</span>
+     
+   
+ <span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Using-GUI">Using GUI<a class="anchor-link" href="#Using-GUI"> </a></h2><p>InputInitial creates the prompt for the user to enter inputs.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// Below line is unnecessary</span>
+<span class="c1">//package com.hacks.trajectoryCalculator;</span>
+
+<span class="kn">import</span> <span class="nn">javax.swing.JOptionPane</span><span class="p">;</span> <span class="c1">// library to display options</span>
+<span class="kn">import</span> <span class="nn">javax.swing.JTextField</span><span class="p">;</span> <span class="c1">// library to create a text field to render on GUI</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">InputInitial</span> <span class="p">{</span>
+    <span class="c1">// instance variables to be used</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">Double</span> <span class="n">initialVelocity</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">Double</span> <span class="n">initialDegrees</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">Double</span> <span class="n">initialHeight</span><span class="p">;</span>
+
+    <span class="c1">// create the GUI element that users input into</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">spawnInputs</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// while the values have not changed yet, keep going (for error handling)</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">initialVelocity</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="n">initialDegrees</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="n">initialHeight</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// text field initialization</span>
+            <span class="n">JTextField</span> <span class="n">inputVelocity</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JTextField</span><span class="p">();</span>
+            <span class="n">JTextField</span> <span class="n">inputDegrees</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JTextField</span><span class="p">();</span>
+            <span class="n">JTextField</span> <span class="n">inputHeight</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JTextField</span><span class="p">();</span>
+
+            <span class="c1">// organizing the input text to display + the text field in object</span>
+            <span class="n">Object</span><span class="o">[]</span> <span class="n">inputs</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s">&quot;Initial Velocity (m/s):&quot;</span><span class="p">,</span> <span class="n">inputVelocity</span><span class="p">,</span>
+                <span class="s">&quot;Initial Degrees:&quot;</span><span class="p">,</span> <span class="n">inputDegrees</span><span class="p">,</span>
+                <span class="s">&quot;Initial Height (m):&quot;</span><span class="p">,</span> <span class="n">inputHeight</span>
+            <span class="p">};</span>
+
+            <span class="n">JOptionPane</span><span class="p">.</span><span class="na">showConfirmDialog</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="n">inputs</span><span class="p">,</span> <span class="s">&quot;Input the initial values for your object (numbers only):&quot;</span><span class="p">,</span> <span class="n">JOptionPane</span><span class="p">.</span><span class="na">OK_CANCEL_OPTION</span><span class="p">);</span> <span class="c1">// creates the option menu with the 3 inputs</span>
+
+            <span class="c1">// take the input, assign it to the public variables</span>
+            <span class="n">initialVelocity</span> <span class="o">=</span> <span class="n">parseInput</span><span class="p">(</span><span class="n">inputVelocity</span><span class="p">);</span>
+            <span class="n">initialDegrees</span> <span class="o">=</span> <span class="n">parseInput</span><span class="p">(</span><span class="n">inputDegrees</span><span class="p">);</span>
+            <span class="n">initialHeight</span> <span class="o">=</span> <span class="n">parseInput</span><span class="p">(</span><span class="n">inputHeight</span><span class="p">);</span>
+        <span class="p">}</span>
+        
+    <span class="p">}</span>
+
+    <span class="c1">// change JTextField into Double, also error handling</span>
+    <span class="kd">public</span> <span class="n">Double</span> <span class="nf">parseInput</span><span class="p">(</span><span class="n">JTextField</span> <span class="n">inputValue</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">String</span> <span class="n">placeholder</span> <span class="o">=</span> <span class="n">inputValue</span><span class="p">.</span><span class="na">getText</span><span class="p">();</span> <span class="c1">// get the string out of the input</span>
+        
+        <span class="c1">// error handling + edge cases</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="kt">double</span> <span class="n">initialValue</span> <span class="o">=</span> <span class="n">Double</span><span class="p">.</span><span class="na">parseDouble</span><span class="p">(</span><span class="n">placeholder</span><span class="p">);</span>
+
+            <span class="c1">// if negative, cannot be valid so throw error --&gt; reinput values bc still null</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">initialValue</span> <span class="o">&lt;</span> <span class="mf">0.0</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">JOptionPane</span><span class="p">.</span><span class="na">showMessageDialog</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="s">&quot;Inputs must be greater than 0&quot;</span><span class="p">,</span> <span class="s">&quot;Invalid Input&quot;</span><span class="p">,</span> <span class="n">JOptionPane</span><span class="p">.</span><span class="na">WARNING_MESSAGE</span><span class="p">);</span>
+                <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="c1">// if everything ok, return the value</span>
+                <span class="k">return</span> <span class="n">initialValue</span><span class="p">;</span>
+            <span class="p">}</span>
+            
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// if cannot be cased as a double, throw error --&gt; reinput values</span>
+            <span class="n">JOptionPane</span><span class="p">.</span><span class="na">showMessageDialog</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="s">&quot;There was an invalid input for &quot;</span> <span class="o">+</span> <span class="n">placeholder</span> <span class="o">+</span> <span class="s">&quot;, please try again. &quot;</span> <span class="o">+</span> <span class="n">e</span><span class="p">,</span> <span class="s">&quot;Unwanted Input&quot;</span><span class="p">,</span> <span class="n">JOptionPane</span><span class="p">.</span><span class="na">WARNING_MESSAGE</span><span class="p">);</span>
+            <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/congenial-tribble/2022/09/05/trajectorykeycode.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/congenial-tribble/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/congenial-tribble/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/congenial-tribble/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" target="_blank" title="fastai"><svg class="svg-icon grey"><use xlink:href="/congenial-tribble/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" target="_blank" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/congenial-tribble/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
