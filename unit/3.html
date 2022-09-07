@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Boolean Expressions and If Statements | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Boolean Expressions and If Statements" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Focus on Ifs, Switch, Expressions and how to build control structures in Java." />
+<meta property="og:description" content="Focus on Ifs, Switch, Expressions and how to build control structures in Java." />
+<link rel="canonical" href="https://horizon-ab.github.io/congenial-tribble/unit/3" />
+<meta property="og:url" content="https://horizon-ab.github.io/congenial-tribble/unit/3" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:image" content="https://horizon-ab.github.io/congenial-tribble/images/boolean.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-06T00:00:00-05:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://horizon-ab.github.io/congenial-tribble/images/boolean.png" />
+<meta property="twitter:title" content="Boolean Expressions and If Statements" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-06T00:00:00-05:00","datePublished":"2022-09-06T00:00:00-05:00","description":"Focus on Ifs, Switch, Expressions and how to build control structures in Java.","headline":"Boolean Expressions and If Statements","image":"https://horizon-ab.github.io/congenial-tribble/images/boolean.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://horizon-ab.github.io/congenial-tribble/unit/3"},"url":"https://horizon-ab.github.io/congenial-tribble/unit/3"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/congenial-tribble/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://horizon-ab.github.io/congenial-tribble/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/congenial-tribble/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/congenial-tribble/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/congenial-tribble/search/">Search</a><a class="page-link" href="/congenial-tribble/categories/">Tags</a><a class="page-link" href="/congenial-tribble/notes/">Notes</a><a class="page-link" href="/congenial-tribble/about/">About Me</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Boolean Expressions and If Statements</h1><p class="page-description">Focus on Ifs, Switch, Expressions and how to build control structures in Java.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-06T00:00:00-05:00" itemprop="datePublished">
+        Sep 6, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      7 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/congenial-tribble/categories/#units">units</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/horizon-ab/congenial-tribble/tree/master/_notebooks/2022-09-06-booleansandifs.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/congenial-tribble/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/horizon-ab/congenial-tribble/master?filepath=_notebooks%2F2022-09-06-booleansandifs.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/congenial-tribble/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/horizon-ab/congenial-tribble/blob/master/_notebooks/2022-09-06-booleansandifs.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/congenial-tribble/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fhorizon-ab%2Fcongenial-tribble%2Fblob%2Fmaster%2F_notebooks%2F2022-09-06-booleansandifs.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/congenial-tribble/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Expression,-Assignments,-and-Condition-Statements">Expression, Assignments, and Condition Statements </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Introduction-to-Boolean-expression">Introduction to Boolean expression </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Hacks">Hacks </a></li>
+<li class="toc-entry toc-h2"><a href="#Personal-hacks">Personal hacks </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#If-Statements">If Statements </a></li>
+<li class="toc-entry toc-h3"><a href="#A-lot-of-elseif-statements">A lot of elseif statements </a></li>
+<li class="toc-entry toc-h3"><a href="#Switch-Cases">Switch Cases </a></li>
+<li class="toc-entry toc-h3"><a href="#De-Morgan's-Law">De Morgan&#39;s Law </a></li>
+</ul>
+</li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-09-06-booleansandifs.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Expression,-Assignments,-and-Condition-Statements">
+<a class="anchor" href="#Expression,-Assignments,-and-Condition-Statements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Expression, Assignments, and Condition Statements<a class="anchor-link" href="#Expression,-Assignments,-and-Condition-Statements"> </a>
+</h2>
+<p>All of the Units have video series.  We have access to information and content for College Board and Code.org.  Below are two sample videos, it is up to you to determine the detail or brevity that you will need according to your experience.</p>
+<ul>
+<li>AP Classroom <a href="https://apclassroom.collegeboard.org/8/home?apd=5kbsvu3q3p&amp;unit=3">Boolean Expressions</a>
+</li>
+<li>Code.org <a href="https://www.youtube.com/watch?v=2rQmLwYVYpw">If and Conditions</a>, less than 2 minutes</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Introduction-to-Boolean-expression">
+<a class="anchor" href="#Introduction-to-Boolean-expression" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction to Boolean expression<a class="anchor-link" href="#Introduction-to-Boolean-expression"> </a>
+</h3>
+<p>A Boolean expression is a logical statement that can be evaluated to True or False.  A Boolean expression may be composed of a combination of the Boolean constants true or false.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// All of the boolean expressions below evaluate to true</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"True code block"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="kc">true</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"True and Not False code block"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="kc">true</span> <span class="o">||</span> <span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"True or False code block"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="p">((</span><span class="kc">true</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="kc">false</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="kc">true</span> <span class="o">||</span> <span class="kc">false</span><span class="p">))</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Confusing code block"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">((</span><span class="kc">false</span> <span class="o">||</span> <span class="o">!</span><span class="kc">true</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="kc">false</span> <span class="o">&amp;&amp;</span> <span class="kc">true</span><span class="p">)))</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"De Morgan's law in my head of confusing code block"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Can any of the above expression be simplified?  What would they simplify to?  Are any of these expressions useful?</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True code block
+True and Not False code block
+True or False code block
+Confusing code block
+De Morgan's law of confusing code block
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hacks">
+<a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
+</h2>
+<p>Build your own Jupyter Notebook lesson on ifs</p>
+<ul>
+<li>Explain if, if-else, and if-elseif-else.</li>
+<li>Make a markdown block before you sample code</li>
+<li>Comment in code to describe each decision </li>
+</ul>
+<p>Add to lesson switch-case</p>
+<ol>
+<li>Create and if-elseif-elseif-elseif-else statement, 5 or more conditions. </li>
+<li>Covert the 5 or more decisions to a switch-case-case-case-case-otherwise.</li>
+<li>Make a markdown block before each code example</li>
+<li>Comment/establish a style of comments for your if-elseif and switch-case code blocks</li>
+</ol>
+<p>Finish lesson with De Morgan's law</p>
+<ol>
+<li>Describe De Morgan's law</li>
+<li>Illustrate De Morgan's law</li>
+<li>Show some code running that shows understanding</li>
+</ol>
+<p>Resources, it is really time to show you can find resources beyond the Teacher.   Code/Code/Coding is everywhere, find something that helps.</p>
+<ol>
+<li>
+<a href="https://studio.code.org/s/csa4-2022?section_id=4160330">Code.org</a> Unitt 4 section 1 to 5 can help with some ideas.</li>
+<li>
+<a href="https://apclassroom.collegeboard.org/8/home?unit=3">AP Classroom unit 3</a> has outline for unit</li>
+<li>
+<a href="https://www.codecademy.com/learn/learn-java/modules/learn-java-conditionals-control-flow-u">CodeAcademy</a> has some online resources</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Personal-hacks">
+<a class="anchor" href="#Personal-hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Personal hacks<a class="anchor-link" href="#Personal-hacks"> </a>
+</h2>
+<h3 id="If-Statements">
+<a class="anchor" href="#If-Statements" aria-hidden="true"><span class="octicon octicon-link"></span></a>If Statements<a class="anchor-link" href="#If-Statements"> </a>
+</h3>
+<p>If statements are, in my opinion, at the core of all conditional statements. Essentially, whatever comes inside if statements only runs if the 
+expression inside the if statement evaluates to be true. Otherwise, the code inside will not run and will move on.</p>
+<p>If the programmer wants to create other code to run in a false case, then they have the else statement to use in an if-else statement. Else 
+statements only run if the if statement evalulates to false.</p>
+<p>If statements can be chained in succession using the if-elseif-else statement. The if and else components work exactly the same, but the elseif 
+part can be thought of as a combination between the two. Elseif only runs if the if (or another elseif) satement before evalulates to false and the 
+expression inside the elseif evalulates to true. These elseif statements can be stacked over and over again to handle all sorts of different cases.</p>
+<p>Taken altogether, these three statements can be used to handle every sort of conditional case imaginable. It may be a bit confusing to have it 
+explained on text, but it's much easier to just use actual code to demonstrate:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ifTest</span> <span class="p">{</span>
+    
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        
+        <span class="kt">int</span> <span class="n">numberOne</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+        <span class="c1">// if statement</span>
+        <span class="c1">// Since numberOne (5) is greater than 1, then it evaluates to be true and the print statement below runs</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">numberOne</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">numberOne</span> <span class="o">+</span> <span class="s">" is greater than 1!"</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">// if-else statement</span>
+        <span class="c1">// Since numberOne (5) is not greater than 9, then it evalulates to be false and then the else portion runs instead of the if</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">numberOne</span> <span class="o">&gt;</span> <span class="mi">9</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">numberOne</span> <span class="o">+</span> <span class="s">" is greater than 9!"</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">numberOne</span> <span class="o">+</span> <span class="s">" is not greater than 9!"</span><span class="p">);</span>
+        <span class="p">}</span>
+        
+        <span class="c1">// if-elseif-else statement</span>
+        <span class="c1">// numberOne (5) is not equal to 1, so the else-if runs next. Since numberOne (5) is equal to 5, then the code under else-if runs</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">numberOne</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"numberOne is equal to 1!"</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">numberOne</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"numberOne is equal to 5!"</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"I don't know what numberOne is!"</span><span class="p">);</span>
+        <span class="p">}</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">ifTest</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>5 is greater than 1!
+5 is not greater than 9!
+numberOne is equal to 5!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="A-lot-of-elseif-statements">
+<a class="anchor" href="#A-lot-of-elseif-statements" aria-hidden="true"><span class="octicon octicon-link"></span></a>A lot of elseif statements<a class="anchor-link" href="#A-lot-of-elseif-statements"> </a>
+</h3>
+<p>You can see in the below example how a lot of elseif statements can be chained together for something like an if-elseif-elseif-elseif-elseif-else 
+statement. The example below may be quite long, but there are other things you can do to simplify this:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">elseifStatements</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        
+        <span class="n">String</span> <span class="n">favoriteColor</span> <span class="o">=</span> <span class="s">"green"</span><span class="p">;</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">favoriteColor</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"red"</span><span class="p">))</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The favorite color is red!"</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">favoriteColor</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"orange"</span><span class="p">))</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The favorite color is orange!"</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">favoriteColor</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"yellow"</span><span class="p">))</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The favorite color is yellow!"</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">favoriteColor</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"green"</span><span class="p">))</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The favorite color is green!"</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">favoriteColor</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"blue"</span><span class="p">))</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The favorite color is blue!"</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">favoriteColor</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"purple"</span><span class="p">))</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The favorite color is purple!"</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"I don't know what the favorite color is!"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">elseifStatements</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The favorite color is green!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Switch-Cases">
+<a class="anchor" href="#Switch-Cases" aria-hidden="true"><span class="octicon octicon-link"></span></a>Switch Cases<a class="anchor-link" href="#Switch-Cases"> </a>
+</h3>
+<p>Switch cases are similar to if statements in that they run certain lines of code when certain conditions are true. However, switch cases only run 
+when a prespecified variable is equal to whatever is given in each of the cases.</p>
+<p>Why would I use this? Well, they can be more efficient than writing a ton of elseif statements.</p>
+<p>This is also a bit confusing to explain through text, so here's another example (note how break is used to prevent everything below it from running):</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">switchTest</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="n">String</span> <span class="n">favoriteColor</span> <span class="o">=</span> <span class="s">"green"</span><span class="p">;</span>
+
+        <span class="k">switch</span> <span class="p">(</span><span class="n">favoriteColor</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">case</span> <span class="s">"red"</span><span class="p">:</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The favorite color is red!"</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="s">"orange"</span><span class="p">:</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The favorite color is orange!"</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="s">"yellow"</span><span class="p">:</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The favorite color is yellow!"</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="s">"green"</span><span class="p">:</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The favorite color is green!"</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="s">"blue"</span><span class="p">:</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The favorite color is blue!"</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="s">"purple"</span><span class="p">:</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The favorite color is purple!"</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">default</span><span class="p">:</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"I don't know what the favorite color is!"</span><span class="p">);</span>
+
+        <span class="p">}</span>
+
+
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">switchTest</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The favorite color is green!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="De-Morgan's-Law">
+<a class="anchor" href="#De-Morgan's-Law" aria-hidden="true"><span class="octicon octicon-link"></span></a>De Morgan's Law<a class="anchor-link" href="#De-Morgan's-Law"> </a>
+</h3>
+<p>De Morgan's Law is a bit more mathematical in nature, dealing with set theory, so I'll try my best to describe it here.</p>
+<p>De Morgan's Law basically explains how certain boolean statements can be rewritten as different expressions, yet essentially be the same. 
+More specifically, it states that "The complement of the union of two sets is the same as the intersection of their complements" or "The 
+complement of the intersection of two sets is the same as the union of their complements".</p>
+<p>What the heck does that mean? An easier way to think about it would be like this:</p>
+<ul>
+<li>not (A or B) = (not A) and (not B)</li>
+<li>not (A and B) = (not A) or (not B)</li>
+</ul>
+<p>In a more formalalized, mathematical way:</p>
+<p><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b55ab78fcd4c3b617df4e2195d487dda13c09e7d" alt="Set Theory Stuff"></p>
+<p>But even with all that text, it's still pretty confusing, right? So it's probably best to visualize it using an actual image. This one 
+I found online pretty much summarizes it best:</p>
+<p><img src="https://www.onlinemathlearning.com/image-files/de-morgans-law.png" alt="More Set Theory Stuff"></p>
+<p>The green shaded area is basically what's being covered in each equality. Both sides cover the same thing.</p>
+<p>Finally, let's go through an example of how this would apply in code. Essentially, we'll use a few variables to make a whole bunch of complicated 
+boolean statements that actually mean the same exact thing:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">deMorgansLaw</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">boolean</span> <span class="n">a</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="kt">boolean</span> <span class="n">b</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+        <span class="c1">// These two statements are exactly equal according to De Morgan's law</span>
+        <span class="c1">// In this case, the only way to yield an output of true would be to have both a and b to be false (change it to check)</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">a</span> <span class="o">||</span> <span class="n">b</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="o">!</span><span class="n">a</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">b</span><span class="p">);</span>
+
+        <span class="kt">boolean</span> <span class="n">c</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="kt">boolean</span> <span class="n">d</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+        <span class="c1">// These two statements are also exactly equal according to De Morgan's Law</span>
+        <span class="c1">// In this case, the only way to yield an output of false would be to have both c and d to be true (change it to check)</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">c</span> <span class="o">&amp;&amp;</span> <span class="n">d</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="o">!</span><span class="n">c</span> <span class="o">||</span> <span class="o">!</span><span class="n">d</span><span class="p">);</span>
+        
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">deMorgansLaw</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>false
+false
+true
+true
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/congenial-tribble/unit/3" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/congenial-tribble/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/congenial-tribble/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/congenial-tribble/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" target="_blank" title="fastai"><svg class="svg-icon grey"><use xlink:href="/congenial-tribble/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" target="_blank" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/congenial-tribble/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
