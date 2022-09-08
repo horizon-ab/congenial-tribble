@@ -12,3 +12,13 @@ _notebooks/.ipynb_checkpoints
 .netlify
 .tweet-cache
 __pycache__
+_posts/2020-02-20-test.md
+_posts/2022-08-19-hellojava.md
+_posts/2022-08-19-hellopython.md
+_posts/2022-08-22-bashtutorial.md
+_posts/2022-08-22-primitives.md
+_posts/2022-08-25-otherdatatypes.md
+_posts/2022-08-25-recursion.md
+_posts/2022-09-04-usingobjects.md
+_posts/2022-09-05-trajectorykeycode.md
+_posts/2022-09-06-booleansandifs.md
