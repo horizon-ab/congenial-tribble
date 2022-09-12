@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      7 min read
+      9 min read
     
 </span></p>
 
@@ -138,6 +138,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#A-lot-of-elseif-statements">A lot of elseif statements </a></li>
 <li class="toc-entry toc-h3"><a href="#Switch-Cases">Switch Cases </a></li>
 <li class="toc-entry toc-h3"><a href="#De-Morgan's-Law">De Morgan&#39;s Law </a></li>
+<li class="toc-entry toc-h3"><a href="#Conclusion">Conclusion </a></li>
 </ul>
 </li>
 </ul><!--
@@ -578,6 +579,101 @@ boolean statements that actually mean the same exact thing:</p>
 false
 true
 true
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Conclusion">
+<a class="anchor" href="#Conclusion" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conclusion<a class="anchor-link" href="#Conclusion"> </a>
+</h3>
+<p>If statements, elseif statements, and else statmenet are the most basic components of conditionals, and thus are essential for any programmer to understand. They allow programs to run different lines of codes depending on given conditions, letting a program do various things when run multiple times.</p>
+<p>Switch statements are similar to if statements, but are more tailored towards testing a single variable. However, they can be more efficient than branching many if and elseif statements.</p>
+<p>De Morgan's Law describes the more mathematical complexities of if statements, explaining how certain conditions are actually equal to certain others. These can allow a programmer to rewrite their code or reexamine how it works.</p>
+<p>Overall, knowing all of these things can be super helpful in one's journey as a programmer. To finish things off, I made a simple guessing number game below, applying conditionals to check victory, defeat, and more.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.*</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">guessANumber</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Scanner</span> <span class="n">input</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">guessNumber</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">guesses</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">secretNumber</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)((</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+
+        <span class="k">while</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"You have "</span> <span class="o">+</span> <span class="n">guesses</span> <span class="o">+</span> <span class="s">" guesses left!"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Guess a number (1-100): "</span><span class="p">);</span>
+            <span class="n">guessNumber</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+            <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">guessNumber</span> <span class="o">==</span> <span class="n">secretNumber</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"You guessed it! The secret number was "</span> <span class="o">+</span> <span class="n">secretNumber</span> <span class="o">+</span> <span class="s">"!"</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">guessNumber</span> <span class="o">&gt;</span> <span class="n">secretNumber</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">guessNumber</span> <span class="o">+</span> <span class="s">" is too high!"</span><span class="p">);</span>
+                <span class="n">guesses</span><span class="o">--</span><span class="p">;</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">guessNumber</span> <span class="o">&lt;</span> <span class="n">secretNumber</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">guessNumber</span> <span class="o">+</span> <span class="s">" is too low!"</span><span class="p">);</span>
+                <span class="n">guesses</span><span class="o">--</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">guesses</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"You lose! The secret number was "</span> <span class="o">+</span> <span class="n">secretNumber</span> <span class="o">+</span> <span class="s">"!"</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">guessANumber</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>You have 5 guesses left!
+Guess a number (1-100): 
+50 is too low!
+You have 4 guesses left!
+Guess a number (1-100): 
+75 is too high!
+You have 3 guesses left!
+Guess a number (1-100): 
+63 is too low!
+You have 2 guesses left!
+Guess a number (1-100): 
+70 is too high!
+You have 1 guesses left!
+Guess a number (1-100): 
+You guessed it! The secret number was 66!
 </pre>
 </div>
 </div>
