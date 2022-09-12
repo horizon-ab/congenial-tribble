@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>The Kinematic Equations | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="The Kinematic Equations" />
+<meta name="author" content="Bailey Say" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="How to describe 1D Motion" />
+<meta property="og:description" content="How to describe 1D Motion" />
+<link rel="canonical" href="https://horizon-ab.github.io/congenial-tribble/markdown/physics/2022/09/10/kinematicequations.html" />
+<meta property="og:url" content="https://horizon-ab.github.io/congenial-tribble/markdown/physics/2022/09/10/kinematicequations.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-10T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The Kinematic Equations" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Bailey Say"},"dateModified":"2022-09-10T00:00:00-05:00","datePublished":"2022-09-10T00:00:00-05:00","description":"How to describe 1D Motion","headline":"The Kinematic Equations","mainEntityOfPage":{"@type":"WebPage","@id":"https://horizon-ab.github.io/congenial-tribble/markdown/physics/2022/09/10/kinematicequations.html"},"url":"https://horizon-ab.github.io/congenial-tribble/markdown/physics/2022/09/10/kinematicequations.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/congenial-tribble/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://horizon-ab.github.io/congenial-tribble/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/congenial-tribble/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/congenial-tribble/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/congenial-tribble/search/">Search</a><a class="page-link" href="/congenial-tribble/categories/">Tags</a><a class="page-link" href="/congenial-tribble/notes/">Notes</a><a class="page-link" href="/congenial-tribble/about/">About Me</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">The Kinematic Equations</h1><p class="page-description">How to describe 1D Motion</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-10T00:00:00-05:00" itemprop="datePublished">
+        Sep 10, 2022
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Bailey Say</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/congenial-tribble/categories/#markdown">markdown</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/congenial-tribble/categories/#physics">physics</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#kinematics">Kinematics</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#the-kinematic-equations">The Kinematic Equations</a></li>
+</ul>
+</li>
+</ul><h1 id="kinematics">
+<a class="anchor" href="#kinematics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Kinematics</h1>
+
+<p>Kinematics deals with motion in a single dimension. Left to right, Up to down, something like that. While it may seem quite restricting 
+right now (after all we live in 3 dimenstions), it’s important to be able to describe a single dimension before describing 3. Fundamentals 
+are important in every field, and physics is no exception.</p>
+
+<p>So in this post, I just want to review 4 key equations that are central to kinematics.</p>
+
+<h2 id="the-kinematic-equations">
+<a class="anchor" href="#the-kinematic-equations" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Kinematic Equations</h2>
+
+<p>Below are the 4 essential equations to kinematics (assuming acceleration is constant):</p>
+
+<p><img src="https://cdn.kastatic.org/googleusercontent/BO82YZEm2LGnHiU5RcqaKRltWAkf4MTXv-QcUCe09uVP2h-2FSWaYTzTtEHxhD2-sehTRstmwW1MdPpTI5aIKC4" alt="Equations"></p>
+
+<p>Let’s go through each of them in order.</p>
+
+<ol>
+  <li>
+    <p>This is a pretty basic equation, and quite self-explanatory to say the least. The final velocity of an object is equal to the initial 
+velocity plus the acceleration times time. Well, acceleration times time is just change in velocity. So, adding change in velocity to 
+inital velocity is just final velocity.</p>
+  </li>
+  <li>
+    <p>This one’s a bit more complicated, but I’ll try to explain. Taking the average velocity (final plus initial over 2) and multiplying it 
+by the time should yield displacement, because it’s similar to just rearranging the way to calculate area on a velocity graph. Just like 
+how the formula for an arithmetic series works.</p>
+  </li>
+  <li>
+    <p>This equation is pretty complicated, but I think I have an idea. Initial velocity times time just represents the bottom rectangle 
+under a velocity graph, while acceleration times time squared divided by 2 just represents the triangle above that (acceleration times time represents change in velocity or the vertical height between initial and final on the graph, time just represents the horizontal length).</p>
+  </li>
+  <li>
+    <p>I’m going to be honest, I don’t even know where to start on this one. I’ll probably figure it out later and edit this post. But for now, enjoy this picture of a sloth:</p>
+  </li>
+</ol>
+
+<p><img src="https://twpark.com/wp-content/uploads/2021/08/sloth-scaled.jpeg" alt="Wild Sloth"></p>
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="horizon-ab/congenial-tribble"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/congenial-tribble/markdown/physics/2022/09/10/kinematicequations.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/congenial-tribble/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/congenial-tribble/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/congenial-tribble/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" target="_blank" title="fastai"><svg class="svg-icon grey"><use xlink:href="/congenial-tribble/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" target="_blank" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/congenial-tribble/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
