@@ -431,7 +431,7 @@ html, body, input, textarea, select, button { color: rgba(255, 255, 255, 0.87) !
 
 a { color: #4bbaff !important; }
 
-a:hover { color: rgba(255, 255, 255, 0.87) !important; }
+a:hover { color: rgba(255, 255, 255, 0.87) !important; text-decoration: none !important; font-weight: bold !important; }
 
 .site-title, .site-title:visited, .site-nav, .page-link { color: rgba(255, 255, 255, 0.87) !important; }
 
