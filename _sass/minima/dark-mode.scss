@@ -17,6 +17,8 @@ a {
 
 a:hover {
     color:$high-emph !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
 }
 
 .site-title, .site-title:visited, .site-nav, .page-link {
