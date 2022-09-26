@@ -217,7 +217,7 @@ window.onload = wrap_img;
     <span class="c1">// HACKS START HERE</span>
 
     <span class="c1">// For-loop implementation</span>
-    <span class="kd">static</span> <span class="kd">class</span> <span class="nc">usingFor</span> <span class="kd">extends</span> <span class="n">Fibo</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">usingFor</span> <span class="kd">extends</span> <span class="n">Fibo</span> <span class="p">{</span>
 
         <span class="kd">public</span> <span class="nf">usingFor</span><span class="p">()</span> <span class="p">{</span>
             <span class="kd">super</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
@@ -241,7 +241,7 @@ window.onload = wrap_img;
     <span class="p">}</span>
 
     <span class="c1">// While-loop implementation</span>
-    <span class="kd">static</span> <span class="kd">class</span> <span class="nc">usingWhile</span> <span class="kd">extends</span> <span class="n">Fibo</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">usingWhile</span> <span class="kd">extends</span> <span class="n">Fibo</span> <span class="p">{</span>
 
         <span class="kd">public</span> <span class="nf">usingWhile</span><span class="p">()</span> <span class="p">{</span>
             <span class="kd">super</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
@@ -267,7 +267,7 @@ window.onload = wrap_img;
     <span class="p">}</span>
     
     <span class="c1">// Recursion impelmentation</span>
-    <span class="kd">static</span> <span class="kd">class</span> <span class="nc">usingRecursion</span> <span class="kd">extends</span> <span class="n">Fibo</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">usingRecursion</span> <span class="kd">extends</span> <span class="n">Fibo</span> <span class="p">{</span>
 
         <span class="kd">public</span> <span class="nf">usingRecursion</span><span class="p">()</span> <span class="p">{</span>
             <span class="kd">super</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
@@ -303,11 +303,11 @@ window.onload = wrap_img;
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">Fibo</span> <span class="n">fib</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Fibo</span><span class="p">();</span>
         <span class="n">fib</span><span class="p">.</span><span class="na">print</span><span class="p">();</span>
-        <span class="n">usingFor</span> <span class="n">test1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">usingFor</span><span class="p">();</span>
+        <span class="n">Fibo</span><span class="p">.</span><span class="na">usingFor</span> <span class="n">test1</span> <span class="o">=</span> <span class="n">fib</span><span class="p">.</span><span class="na">new</span> <span class="nf">usingFor</span><span class="p">();</span>
         <span class="n">test1</span><span class="p">.</span><span class="na">print</span><span class="p">();</span>
-        <span class="n">usingWhile</span> <span class="n">test2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">usingWhile</span><span class="p">();</span>
+        <span class="n">Fibo</span><span class="p">.</span><span class="na">usingWhile</span> <span class="n">test2</span> <span class="o">=</span> <span class="n">fib</span><span class="p">.</span><span class="na">new</span> <span class="nf">usingWhile</span><span class="p">();</span>
         <span class="n">test2</span><span class="p">.</span><span class="na">print</span><span class="p">();</span>
-        <span class="n">usingRecursion</span> <span class="n">test3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">usingRecursion</span><span class="p">();</span>
+        <span class="n">Fibo</span><span class="p">.</span><span class="na">usingRecursion</span> <span class="n">test3</span> <span class="o">=</span> <span class="n">fib</span><span class="p">.</span><span class="na">new</span> <span class="nf">usingRecursion</span><span class="p">();</span>
         <span class="n">test3</span><span class="p">.</span><span class="na">print</span><span class="p">();</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -349,7 +349,7 @@ fibonacci Sequence 17 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377,
 fibonacci Sequence 18 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597]
 fibonacci Sequence 19 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584]
 fibonacci Sequence 20 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181]
-Init method runtime = 1945625
+Init method runtime = 39541
 Init method = For
 fibonacci Number 20 = 4181
 fibonacci List = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181]
@@ -374,7 +374,7 @@ fibonacci Sequence 17 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377,
 fibonacci Sequence 18 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597]
 fibonacci Sequence 19 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584]
 fibonacci Sequence 20 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181]
-Init method runtime = 22083
+Init method runtime = 12208
 Init method = While
 fibonacci Number 20 = 4181
 fibonacci List = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181]
@@ -399,7 +399,7 @@ fibonacci Sequence 17 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377,
 fibonacci Sequence 18 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597]
 fibonacci Sequence 19 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584]
 fibonacci Sequence 20 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181]
-Init method runtime = 21000
+Init method runtime = 11458
 Init method = Recursion
 fibonacci Number 20 = 4181
 fibonacci List = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181]
@@ -424,7 +424,7 @@ fibonacci Sequence 17 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377,
 fibonacci Sequence 18 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597]
 fibonacci Sequence 19 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584]
 fibonacci Sequence 20 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181]
-Init method runtime = 18750
+Init method runtime = 11875
 </pre>
 </div>
 </div>
