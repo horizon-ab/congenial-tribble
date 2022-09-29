@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      11 min read
+      14 min read
     
 </span></p>
 
@@ -553,7 +553,7 @@ window.onload = wrap_img;
 <p>Grayscale = (R + G + B) / 3</p>
 </blockquote>
 <p>However, due to the way that humans perceive light (with different sensitivities for different colors), this isn't the most accurate. This leads to the weighted method, based on the way humans actually weigh different colors of light in their vision:&gt; Grayscale = 0.299R + 0.587G + 0.114B
-Since the weighted method is more efficient, that's what I'll be using here.</p>
+Since the weighted method is more efficient, that's what I'll be using here. Actually implementing it was pretty difficult though. Instead of using the numeric RGB values, I had to calculate the luminance in order to make everything work.</p>
 
 </div>
 </div>
@@ -569,10 +569,12 @@ Since the weighted method is more efficient, that's what I'll be using here.</p>
     
     <span class="kd">public</span> <span class="nf">RedConversion</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">ext</span><span class="p">)</span> <span class="p">{</span>
         <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">ext</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">colorFile</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">outDir</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">"Red"</span> <span class="o">+</span> <span class="s">".png"</span><span class="p">;</span>
     <span class="p">}</span>
 
     <span class="kd">public</span> <span class="nf">RedConversion</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
         <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">colorFile</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">outDir</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">"Red"</span> <span class="o">+</span> <span class="s">".png"</span><span class="p">;</span>
     <span class="p">}</span>
 
     <span class="nd">@Override</span>
@@ -612,7 +614,7 @@ Since the weighted method is more efficient, that's what I'll be using here.</p>
 
             <span class="p">}</span>
         <span class="p">}</span>
-        <span class="c1">// System.out.println("for loop done");</span>
+        <span class="c1">//System.out.println("for loop done");</span>
 
         <span class="k">try</span> <span class="p">{</span>
             <span class="n">ImageIO</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="s">"png"</span><span class="p">,</span> <span class="k">new</span> <span class="n">File</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">colorFile</span><span class="p">)</span> <span class="p">);</span>
@@ -625,90 +627,8 @@ Since the weighted method is more efficient, that's what I'll be using here.</p>
     <span class="p">}</span>
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">RedConversion</span> <span class="n">amogus</span> <span class="o">=</span> <span class="k">new</span> <span class="n">RedConversion</span><span class="p">(</span><span class="s">"amogus"</span><span class="p">,</span> <span class="s">"png"</span><span class="p">);</span>
-        <span class="n">amogus</span><span class="p">.</span><span class="na">conversion</span><span class="p">();</span>
-    <span class="p">}</span>
-
-<span class="p">}</span>
-
-<span class="n">RedConversion</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">BlueConversion</span> <span class="kd">extends</span> <span class="n">ImageBlueprint</span> <span class="p">{</span>
-    <span class="kd">public</span> <span class="nf">BlueConversion</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">ext</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">ext</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="kd">public</span> <span class="nf">BlueConversion</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="nd">@Override</span>
-    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">conversion</span><span class="p">()</span> <span class="p">{</span>
-        <span class="n">BufferedImage</span> <span class="n">img</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
-        <span class="n">PrintWriter</span> <span class="n">colorPrt</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
-        <span class="n">FileWriter</span> <span class="n">colorWrt</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
-        
-        
-        <span class="c1">// Just deletes file if already exists in tmp</span>
-        <span class="k">try</span> <span class="p">{</span>
-            <span class="n">File</span> <span class="n">file</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">colorFile</span><span class="p">);</span>
-            <span class="n">Files</span><span class="p">.</span><span class="na">deleteIfExists</span><span class="p">(</span><span class="n">file</span><span class="p">.</span><span class="na">toPath</span><span class="p">());</span> 
-        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Delete File error: "</span> <span class="o">+</span> <span class="n">e</span><span class="p">);</span>
-        <span class="p">}</span>
-
-        <span class="c1">// try {</span>
-        <span class="c1">//     colorPrt = new PrintWriter(colorWrt = new FileWriter(this.colorFile, true));</span>
-        <span class="c1">// } catch (IOException e) {</span>
-        <span class="c1">//     // TODO Auto-generated catch block</span>
-        <span class="c1">//     e.printStackTrace();</span>
-        <span class="c1">// }</span>
-
-        <span class="k">try</span> <span class="p">{</span>
-            <span class="n">img</span> <span class="o">=</span> <span class="n">ImageIO</span><span class="p">.</span><span class="na">read</span><span class="p">(</span><span class="k">new</span> <span class="n">File</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">inFile</span><span class="p">));</span>
-        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
-            <span class="c1">// TODO Auto-generated catch block</span>
-            <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
-        <span class="p">}</span>
-
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="na">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="na">width</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-                <span class="n">Color</span> <span class="n">col</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Color</span><span class="p">(</span><span class="n">img</span><span class="p">.</span><span class="na">getRGB</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">));</span>
-                <span class="kt">int</span> <span class="n">rgb</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">col</span><span class="p">.</span><span class="na">getBlue</span><span class="p">()).</span><span class="na">getRGB</span><span class="p">();</span>
-                <span class="n">img</span><span class="p">.</span><span class="na">setRGB</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">rgb</span><span class="p">);</span>
-
-            <span class="p">}</span>
-        <span class="p">}</span>
-        <span class="c1">// System.out.println("for loop done");</span>
-
-        <span class="k">try</span> <span class="p">{</span>
-            <span class="n">ImageIO</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="s">"png"</span><span class="p">,</span> <span class="k">new</span> <span class="n">File</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">colorFile</span><span class="p">)</span> <span class="p">);</span>
-        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
-            <span class="c1">// TODO Auto-generated catch block</span>
-            <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
-        <span class="p">}</span>
-
-        
-    <span class="p">}</span>
-
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">BlueConversion</span> <span class="n">amogus</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BlueConversion</span><span class="p">(</span><span class="s">"amogus"</span><span class="p">,</span> <span class="s">"png"</span><span class="p">);</span>
-        <span class="n">amogus</span><span class="p">.</span><span class="na">conversion</span><span class="p">();</span>
+        <span class="n">RedConversion</span> <span class="n">nicandrohan</span> <span class="o">=</span> <span class="k">new</span> <span class="n">RedConversion</span><span class="p">(</span><span class="s">"nicandrohan"</span><span class="p">,</span> <span class="s">"png"</span><span class="p">);</span>
+        <span class="n">nicandrohan</span><span class="p">.</span><span class="na">conversion</span><span class="p">();</span>
     <span class="p">}</span>
 
 <span class="p">}</span>
@@ -731,10 +651,12 @@ Since the weighted method is more efficient, that's what I'll be using here.</p>
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GreenConversion</span> <span class="kd">extends</span> <span class="n">ImageBlueprint</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="nf">GreenConversion</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">ext</span><span class="p">)</span> <span class="p">{</span>
         <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">ext</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">colorFile</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">outDir</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">"Green"</span> <span class="o">+</span> <span class="s">".png"</span><span class="p">;</span>
     <span class="p">}</span>
 
     <span class="kd">public</span> <span class="nf">GreenConversion</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
         <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">colorFile</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">outDir</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">"Green"</span> <span class="o">+</span> <span class="s">".png"</span><span class="p">;</span>
     <span class="p">}</span>
 
     <span class="nd">@Override</span>
@@ -787,8 +709,189 @@ Since the weighted method is more efficient, that's what I'll be using here.</p>
     <span class="p">}</span>
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">GreenConversion</span> <span class="n">amogus</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GreenConversion</span><span class="p">(</span><span class="s">"amogus"</span><span class="p">,</span> <span class="s">"png"</span><span class="p">);</span>
-        <span class="n">amogus</span><span class="p">.</span><span class="na">conversion</span><span class="p">();</span>
+        <span class="n">GreenConversion</span> <span class="n">nicandrohan</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GreenConversion</span><span class="p">(</span><span class="s">"nicandrohan"</span><span class="p">,</span> <span class="s">"png"</span><span class="p">);</span>
+        <span class="n">nicandrohan</span><span class="p">.</span><span class="na">conversion</span><span class="p">();</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">BlueConversion</span> <span class="kd">extends</span> <span class="n">ImageBlueprint</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">BlueConversion</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">ext</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">ext</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">colorFile</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">outDir</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">"Blue"</span> <span class="o">+</span> <span class="s">".png"</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="nf">BlueConversion</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">colorFile</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">outDir</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">"Blue"</span> <span class="o">+</span> <span class="s">".png"</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">conversion</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">BufferedImage</span> <span class="n">img</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+        <span class="n">PrintWriter</span> <span class="n">colorPrt</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+        <span class="n">FileWriter</span> <span class="n">colorWrt</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+        
+        
+        <span class="c1">// Just deletes file if already exists in tmp</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="n">File</span> <span class="n">file</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">colorFile</span><span class="p">);</span>
+            <span class="n">Files</span><span class="p">.</span><span class="na">deleteIfExists</span><span class="p">(</span><span class="n">file</span><span class="p">.</span><span class="na">toPath</span><span class="p">());</span> 
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Delete File error: "</span> <span class="o">+</span> <span class="n">e</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">// try {</span>
+        <span class="c1">//     colorPrt = new PrintWriter(colorWrt = new FileWriter(this.colorFile, true));</span>
+        <span class="c1">// } catch (IOException e) {</span>
+        <span class="c1">//     // TODO Auto-generated catch block</span>
+        <span class="c1">//     e.printStackTrace();</span>
+        <span class="c1">// }</span>
+
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="n">img</span> <span class="o">=</span> <span class="n">ImageIO</span><span class="p">.</span><span class="na">read</span><span class="p">(</span><span class="k">new</span> <span class="n">File</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">inFile</span><span class="p">));</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// TODO Auto-generated catch block</span>
+            <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="na">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="na">width</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">Color</span> <span class="n">col</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Color</span><span class="p">(</span><span class="n">img</span><span class="p">.</span><span class="na">getRGB</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">));</span>
+                <span class="kt">int</span> <span class="n">rgb</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">col</span><span class="p">.</span><span class="na">getBlue</span><span class="p">()).</span><span class="na">getRGB</span><span class="p">();</span>
+                <span class="n">img</span><span class="p">.</span><span class="na">setRGB</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">rgb</span><span class="p">);</span>
+
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="c1">// System.out.println("for loop done");</span>
+
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="n">ImageIO</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="s">"png"</span><span class="p">,</span> <span class="k">new</span> <span class="n">File</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">colorFile</span><span class="p">)</span> <span class="p">);</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// TODO Auto-generated catch block</span>
+            <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">BlueConversion</span> <span class="n">nicandrohan</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BlueConversion</span><span class="p">(</span><span class="s">"nicandrohan"</span><span class="p">,</span> <span class="s">"png"</span><span class="p">);</span>
+        <span class="n">nicandrohan</span><span class="p">.</span><span class="na">conversion</span><span class="p">();</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GrayConversion</span> <span class="kd">extends</span> <span class="n">ImageBlueprint</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">GrayConversion</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">ext</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">ext</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">colorFile</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">outDir</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">"Gray"</span> <span class="o">+</span> <span class="s">".png"</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="nf">GrayConversion</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">colorFile</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">outDir</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">"Gray"</span> <span class="o">+</span> <span class="s">".png"</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">conversion</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">BufferedImage</span> <span class="n">img</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+        <span class="n">PrintWriter</span> <span class="n">colorPrt</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+        <span class="n">FileWriter</span> <span class="n">colorWrt</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+        
+        
+        <span class="c1">// Just deletes file if already exists in tmp</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="n">File</span> <span class="n">file</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">colorFile</span><span class="p">);</span>
+            <span class="n">Files</span><span class="p">.</span><span class="na">deleteIfExists</span><span class="p">(</span><span class="n">file</span><span class="p">.</span><span class="na">toPath</span><span class="p">());</span> 
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Delete File error: "</span> <span class="o">+</span> <span class="n">e</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">// try {</span>
+        <span class="c1">//     colorPrt = new PrintWriter(colorWrt = new FileWriter(this.colorFile, true));</span>
+        <span class="c1">// } catch (IOException e) {</span>
+        <span class="c1">//     // TODO Auto-generated catch block</span>
+        <span class="c1">//     e.printStackTrace();</span>
+        <span class="c1">// }</span>
+
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="n">img</span> <span class="o">=</span> <span class="n">ImageIO</span><span class="p">.</span><span class="na">read</span><span class="p">(</span><span class="k">new</span> <span class="n">File</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">inFile</span><span class="p">));</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// TODO Auto-generated catch block</span>
+            <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="na">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="na">width</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="c1">//Color col = new Color(img.getRGB(j, i));</span>
+                <span class="c1">//int rgb = new Color((int)(0.299 * col.getRed()), (int)(0.114 * col.getGreen()), (int)(0.587 * col.getBlue())).getRGB();</span>
+                <span class="kt">int</span> <span class="n">rgb</span> <span class="o">=</span> <span class="n">img</span><span class="p">.</span><span class="na">getRGB</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+                <span class="kt">int</span> <span class="n">r</span> <span class="o">=</span> <span class="p">(</span><span class="n">rgb</span> <span class="o">&gt;&gt;</span> <span class="mi">16</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xFF</span><span class="p">;</span>
+                <span class="kt">int</span> <span class="n">g</span> <span class="o">=</span> <span class="p">(</span><span class="n">rgb</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xFF</span><span class="p">;</span>
+                <span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="n">rgb</span> <span class="o">&amp;</span> <span class="mh">0xFF</span><span class="p">);</span>
+
+                <span class="c1">// Normalize and gamma correct:</span>
+                <span class="kt">float</span> <span class="n">rr</span> <span class="o">=</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span> <span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="n">r</span> <span class="o">/</span> <span class="mf">255.0</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">);</span>
+                <span class="kt">float</span> <span class="n">gg</span> <span class="o">=</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span> <span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="n">g</span> <span class="o">/</span> <span class="mf">255.0</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">);</span>
+                <span class="kt">float</span> <span class="n">bb</span> <span class="o">=</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span> <span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="n">b</span> <span class="o">/</span> <span class="mf">255.0</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">);</span>
+
+                <span class="c1">// Calculate luminance:</span>
+                <span class="kt">float</span> <span class="n">lum</span> <span class="o">=</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span> <span class="p">(</span><span class="mf">0.2126</span> <span class="o">*</span> <span class="n">rr</span> <span class="o">+</span> <span class="mf">0.7152</span> <span class="o">*</span> <span class="n">gg</span> <span class="o">+</span> <span class="mf">0.0722</span> <span class="o">*</span> <span class="n">bb</span><span class="p">);</span>
+
+                <span class="c1">// Gamma compand and rescale to byte range:</span>
+                <span class="kt">int</span> <span class="n">grayLevel</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="mf">255.0</span> <span class="o">*</span> <span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="n">lum</span><span class="p">,</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="mf">2.2</span><span class="p">));</span>
+                <span class="kt">int</span> <span class="n">gray</span> <span class="o">=</span> <span class="p">(</span><span class="n">grayLevel</span> <span class="o">&lt;&lt;</span> <span class="mi">16</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">grayLevel</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">+</span> <span class="n">grayLevel</span><span class="p">;</span> 
+                <span class="n">img</span><span class="p">.</span><span class="na">setRGB</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">gray</span><span class="p">);</span>
+
+
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="c1">// System.out.println("for loop done");</span>
+
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="n">ImageIO</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="s">"png"</span><span class="p">,</span> <span class="k">new</span> <span class="n">File</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">colorFile</span><span class="p">)</span> <span class="p">);</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// TODO Auto-generated catch block</span>
+            <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">GrayConversion</span> <span class="n">nicandrohan</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GrayConversion</span><span class="p">(</span><span class="s">"nicandrohan"</span><span class="p">,</span> <span class="s">"png"</span><span class="p">);</span>
+        <span class="n">nicandrohan</span><span class="p">.</span><span class="na">conversion</span><span class="p">();</span>
     <span class="p">}</span>
 
 <span class="p">}</span>
