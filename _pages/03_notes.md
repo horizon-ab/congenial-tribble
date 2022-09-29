@@ -18,3 +18,10 @@ For more specific notes, please look at (categories)[https://horizon-ab.github.i
 Import Scanner from java and create a new object with it.
 Get input for variables with object.getLine(), object.getBoolean(), object.getInt(), etc.
 
+## Abstract Methods and Classes
+
+Using the keyword abstract allows one to hide certain details of methods and classes (mainly for security purposes).
+
+Abstract classes cannot be used to create objects, only child clsases that extends from the abstract class can have objects that can access the attributes and methods inside abstract classes.
+
+Abstract methods are established inside abstract classes 
