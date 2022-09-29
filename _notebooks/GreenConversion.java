@@ -24,10 +24,12 @@ import javax.imageio.ImageTypeSpecifier;
 public class GreenConversion extends ImageBlueprint {
     public GreenConversion(String name, String ext) {
         super(name, ext);
+        this.colorFile = this.outDir + name + "Green" + ".png";
     }
 
     public GreenConversion(String name) {
         super(name);
+        this.colorFile = this.outDir + name + "Green" + ".png";
     }
 
     @Override
@@ -80,8 +82,8 @@ public class GreenConversion extends ImageBlueprint {
     }
 
     public static void main(String[] args) {
-        GreenConversion amogus = new GreenConversion("amogus", "png");
-        amogus.conversion();
+        GreenConversion nicandrohan = new GreenConversion("nicandrohan", "png");
+        nicandrohan.conversion();
     }
 
 }
