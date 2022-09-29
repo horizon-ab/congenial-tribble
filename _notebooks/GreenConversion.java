@@ -21,13 +21,12 @@ import javax.imageio.ImageWriter;
 import javax.imageio.ImageReader;
 import javax.imageio.ImageTypeSpecifier;
 
-public class RedConversion extends ImageBlueprint {
-    
-    public RedConversion(String name, String ext) {
+public class GreenConversion extends ImageBlueprint {
+    public GreenConversion(String name, String ext) {
         super(name, ext);
     }
 
-    public RedConversion(String name) {
+    public GreenConversion(String name) {
         super(name);
     }
 
@@ -63,12 +62,12 @@ public class RedConversion extends ImageBlueprint {
         for (int i = 0; i < this.height; i++) {
             for (int j = 0; j < this.width; j++) {
                 Color col = new Color(img.getRGB(j, i));
-                int rgb = new Color(col.getRed(), 0, 0).getRGB();
+                int rgb = new Color(0, col.getGreen(), 0).getRGB();
                 img.setRGB(j, i, rgb);
 
             }
         }
-        //System.out.println("for loop done");
+        // System.out.println("for loop done");
 
         try {
             ImageIO.write(img, "png", new File(this.colorFile) );
@@ -81,7 +80,7 @@ public class RedConversion extends ImageBlueprint {
     }
 
     public static void main(String[] args) {
-        RedConversion amogus = new RedConversion("amogus", "png");
+        GreenConversion amogus = new GreenConversion("amogus", "png");
         amogus.conversion();
     }
 
