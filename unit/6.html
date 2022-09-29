@@ -553,7 +553,8 @@ window.onload = wrap_img;
 <p>Grayscale = (R + G + B) / 3</p>
 </blockquote>
 <p>However, due to the way that humans perceive light (with different sensitivities for different colors), this isn't the most accurate. This leads to the weighted method, based on the way humans actually weigh different colors of light in their vision:&gt; Grayscale = 0.299R + 0.587G + 0.114B
-Since the weighted method is more efficient, that's what I'll be using here. Actually implementing it was pretty difficult though. Instead of using the numeric RGB values, I had to calculate the luminance in order to make everything work.</p>
+I got the information on grayscaling from <a href="https://www.dynamsoft.com/blog/insights/image-processing/image-processing-101-color-space-conversion/">here</a>, so click that link to learn more about it.</p>
+<p>Since the weighted method is more efficient, that's what I'll be using here. Actually implementing it was pretty difficult though. Instead of using the numeric RGB values, I had to calculate the luminance in order to make everything work.</p>
 
 </div>
 </div>
