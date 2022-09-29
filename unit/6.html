@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      12 min read
+      11 min read
     
 </span></p>
 
@@ -578,7 +578,6 @@ Since the weighted method is more efficient, that's what I'll be using here.</p>
     <span class="nd">@Override</span>
     <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">conversion</span><span class="p">()</span> <span class="p">{</span>
         <span class="n">BufferedImage</span> <span class="n">img</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
-        <span class="n">BufferedImage</span> <span class="n">originalImg</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
         <span class="n">PrintWriter</span> <span class="n">colorPrt</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
         <span class="n">FileWriter</span> <span class="n">colorWrt</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
         
@@ -600,12 +599,6 @@ Since the weighted method is more efficient, that's what I'll be using here.</p>
 
         <span class="k">try</span> <span class="p">{</span>
             <span class="n">img</span> <span class="o">=</span> <span class="n">ImageIO</span><span class="p">.</span><span class="na">read</span><span class="p">(</span><span class="k">new</span> <span class="n">File</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">inFile</span><span class="p">));</span>
-        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
-            <span class="c1">// TODO Auto-generated catch block</span>
-            <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
-        <span class="p">}</span>
-        <span class="k">try</span> <span class="p">{</span>
-            <span class="n">originalImg</span> <span class="o">=</span> <span class="n">ImageIO</span><span class="p">.</span><span class="na">read</span><span class="p">(</span><span class="k">new</span> <span class="n">File</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">inFile</span><span class="p">));</span>
         <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
             <span class="c1">// TODO Auto-generated catch block</span>
             <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
@@ -667,7 +660,6 @@ Since the weighted method is more efficient, that's what I'll be using here.</p>
     <span class="nd">@Override</span>
     <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">conversion</span><span class="p">()</span> <span class="p">{</span>
         <span class="n">BufferedImage</span> <span class="n">img</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
-        <span class="n">BufferedImage</span> <span class="n">originalImg</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
         <span class="n">PrintWriter</span> <span class="n">colorPrt</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
         <span class="n">FileWriter</span> <span class="n">colorWrt</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
         
@@ -689,12 +681,6 @@ Since the weighted method is more efficient, that's what I'll be using here.</p>
 
         <span class="k">try</span> <span class="p">{</span>
             <span class="n">img</span> <span class="o">=</span> <span class="n">ImageIO</span><span class="p">.</span><span class="na">read</span><span class="p">(</span><span class="k">new</span> <span class="n">File</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">inFile</span><span class="p">));</span>
-        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
-            <span class="c1">// TODO Auto-generated catch block</span>
-            <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
-        <span class="p">}</span>
-        <span class="k">try</span> <span class="p">{</span>
-            <span class="n">originalImg</span> <span class="o">=</span> <span class="n">ImageIO</span><span class="p">.</span><span class="na">read</span><span class="p">(</span><span class="k">new</span> <span class="n">File</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">inFile</span><span class="p">));</span>
         <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
             <span class="c1">// TODO Auto-generated catch block</span>
             <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
@@ -754,7 +740,6 @@ Since the weighted method is more efficient, that's what I'll be using here.</p>
     <span class="nd">@Override</span>
     <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">conversion</span><span class="p">()</span> <span class="p">{</span>
         <span class="n">BufferedImage</span> <span class="n">img</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
-        <span class="n">BufferedImage</span> <span class="n">originalImg</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
         <span class="n">PrintWriter</span> <span class="n">colorPrt</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
         <span class="n">FileWriter</span> <span class="n">colorWrt</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
         
@@ -776,12 +761,6 @@ Since the weighted method is more efficient, that's what I'll be using here.</p>
 
         <span class="k">try</span> <span class="p">{</span>
             <span class="n">img</span> <span class="o">=</span> <span class="n">ImageIO</span><span class="p">.</span><span class="na">read</span><span class="p">(</span><span class="k">new</span> <span class="n">File</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">inFile</span><span class="p">));</span>
-        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
-            <span class="c1">// TODO Auto-generated catch block</span>
-            <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
-        <span class="p">}</span>
-        <span class="k">try</span> <span class="p">{</span>
-            <span class="n">originalImg</span> <span class="o">=</span> <span class="n">ImageIO</span><span class="p">.</span><span class="na">read</span><span class="p">(</span><span class="k">new</span> <span class="n">File</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">inFile</span><span class="p">));</span>
         <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
             <span class="c1">// TODO Auto-generated catch block</span>
             <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
