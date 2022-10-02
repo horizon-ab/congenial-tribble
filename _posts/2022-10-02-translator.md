@@ -28,13 +28,12 @@ author: Bailey Say
 
 <script>
 
-    encodedParams = new URLSearchParams();
-    encodedParams.append("target", "es");
-    encodedParams.append("source", "en");
-
     function translate() {
+        encodedParams = new URLSearchParams();
         originalText = document.getElementById("inputField").value;
-        encodedParams.append("q", originalText);
+        encodedParams.append("q", "whatever");
+        encodedParams.append("target", "es");
+        encodedParams.append("source", "en");
 
         const options = {
             method: 'POST',
