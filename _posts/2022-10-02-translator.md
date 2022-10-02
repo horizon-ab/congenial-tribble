@@ -29,6 +29,7 @@ author: Bailey Say
 <script>
 
     function translate() {
+        document.getElementById("output").innerHTML = "Successful!";
         const encodedParams = new URLSearchParams();
         originalText = document.getElementById("inputField").value;
         encodedParams.append("q", originalText);
