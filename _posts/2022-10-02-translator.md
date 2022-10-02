@@ -22,16 +22,18 @@ author: Bailey Say
     </div>
     <div>
         <p>Spanish:</p>
-        <p id = "output">Testing</p>
+        <p id="output">Testing</p>
     </div>
 </body>
 
 <script>
 
+    const encodedParams = new URLSearchParams();
+    document.getElementById("output").innerHTML = "Successful!";
+    
     function translate() {
-        document.getElementById("output").innerHTML = "Successful!";
-        const encodedParams = new URLSearchParams();
-        originalText = document.getElementById("inputField").value;
+
+        let originalText = document.getElementById("inputField").value;
         encodedParams.append("q", originalText);
         encodedParams.append("target", "es");
         encodedParams.append("source", "en");
@@ -50,7 +52,6 @@ author: Bailey Say
         fetch('https://google-translate1.p.rapidapi.com/language/translate/v2', options)
             .then(response => response.json().then(data => {
                 console.log(data);
-
                 document.getElementById("output").innerHTML = data.translations[0].translatedText;
             }))
             .then(response => console.log(response))
