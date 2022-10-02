@@ -26,7 +26,7 @@ author: Bailey Say
     </div>
 </body>
 
-<script>
+<script type="text/javascript">
 
     const encodedParams = new URLSearchParams();
 
