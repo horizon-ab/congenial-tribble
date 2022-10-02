@@ -22,7 +22,7 @@ author: Bailey Say
     </div>
     <div>
         <p>Spanish:</p>
-        <p id = "output"></p>
+        <p id = "output">Testing</p>
     </div>
 </body>
 
@@ -51,7 +51,7 @@ author: Bailey Say
             .then(response => response.json().then(data => {
                 console.log(data);
 
-                document.getElementById("output").value = data.translations[0]["translatedText"];
+                document.getElementById("output").value = data.translations[0].translatedText;
             }))
             .then(response => console.log(response))
             .catch(err => console.error(err));
