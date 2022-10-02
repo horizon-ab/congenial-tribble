@@ -33,6 +33,8 @@ author: Bailey Say
 
         function translate() {
 
+            alert ("API has been called");  
+
             let originalText = document.getElementById("inputField").value;
             encodedParams.append("q", originalText);
             encodedParams.append("target", "es");
