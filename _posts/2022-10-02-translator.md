@@ -18,7 +18,7 @@ author: Bailey Say
     <div class = "input">
         <label>Enter English here: </label>
         <input type="text" id="inputField"><br><br>
-        <input type="button" id="btn" value="Translate!" onclick="translate();"><br><br>
+        <button id="btn">Translate!</button><br><br>
     </div>
     <div>   
         <p>Spanish:</p>
