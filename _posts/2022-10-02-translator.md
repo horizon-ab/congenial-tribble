@@ -18,7 +18,7 @@ author: Bailey Say
     <div class = "input">
         <label>Enter English here: </label>
         <input type="text" id="inputField"><br><br>
-        <button onclick="translate()">Translate!</button><br><br>
+        <button onclick="translate();">Translate!</button><br><br>
     </div>
     <div>
         <p>Spanish:</p>
@@ -29,8 +29,7 @@ author: Bailey Say
 <script>
 
     const encodedParams = new URLSearchParams();
-    document.getElementById("output").innerHTML = "Successful!";
-    
+
     function translate() {
 
         let originalText = document.getElementById("inputField").value;
