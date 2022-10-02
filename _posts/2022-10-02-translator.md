@@ -18,44 +18,45 @@ author: Bailey Say
     <div class = "input">
         <label>Enter English here: </label>
         <input type="text" id="inputField"><br><br>
-        <button onclick="translate();">Translate!</button><br><br>
+        <input type="button" value="Translate!" onclick="translate();"><br><br>
     </div>
     <div>
         <p>Spanish:</p>
         <p id="output">Testing</p>
     </div>
+
 </body>
 
 <script type="text/javascript">
 
-    const encodedParams = new URLSearchParams();
+        const encodedParams = new URLSearchParams();
 
-    function translate() {
+        function translate() {
 
-        let originalText = document.getElementById("inputField").value;
-        encodedParams.append("q", originalText);
-        encodedParams.append("target", "es");
-        encodedParams.append("source", "en");
+            let originalText = document.getElementById("inputField").value;
+            encodedParams.append("q", originalText);
+            encodedParams.append("target", "es");
+            encodedParams.append("source", "en");
 
-        const options = {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/x-www-form-urlencoded',
-                'Accept-Encoding': 'application/gzip',
-                'X-RapidAPI-Key': '251e7161e9mshbf81a60446c0900p11bbc1jsnb82befaa1258',
-                'X-RapidAPI-Host': 'google-translate1.p.rapidapi.com'
-            },
-            body: encodedParams
-        };
+            const options = {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/x-www-form-urlencoded',
+                    'Accept-Encoding': 'application/gzip',
+                    'X-RapidAPI-Key': '251e7161e9mshbf81a60446c0900p11bbc1jsnb82befaa1258',
+                    'X-RapidAPI-Host': 'google-translate1.p.rapidapi.com'
+                },
+                body: encodedParams
+            };
 
-        fetch('https://google-translate1.p.rapidapi.com/language/translate/v2', options)
-            .then(response => response.json().then(data => {
-                console.log(data);
-                document.getElementById("output").innerHTML = data.translations[0].translatedText;
-            }))
-            .then(response => console.log(response))
-            .catch(err => console.error(err));
+            fetch('https://google-translate1.p.rapidapi.com/language/translate/v2', options)
+                .then(response => response.json().then(data => {
+                    console.log(data);
+                    document.getElementById("output").innerHTML = data.translations[0].translatedText;
+                }))
+                .then(response => console.log(response))
+                .catch(err => console.error(err));
+            
+            }
         
-        }
-    
 </script>
