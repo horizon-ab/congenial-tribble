@@ -41,7 +41,7 @@ author: Bailey Say
             headers: {
                 'content-type': 'application/x-www-form-urlencoded',
                 'Accept-Encoding': 'application/gzip',
-                'X-RapidAPI-Key': '',
+                'X-RapidAPI-Key': '251e7161e9mshbf81a60446c0900p11bbc1jsnb82befaa1258',
                 'X-RapidAPI-Host': 'google-translate1.p.rapidapi.com'
             },
             body: encodedParams
