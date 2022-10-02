@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Translator",
-            "content": "Translator Please type in the below and press the &quot;translate&quot; button to translate any message from English to Spanish. . Enter English here: Translate! Spanish: . Testing .",
+            "content": "Translator Please type in the box below and press the &quot;translate&quot; button to translate any message from English to Spanish. . Enter English here: Translate! Spanish: . Testing .",
             "url": "https://horizon-ab.github.io/congenial-tribble/fun/translator",
             "relUrl": "/fun/translator",
             "date": " • Oct 2, 2022"
