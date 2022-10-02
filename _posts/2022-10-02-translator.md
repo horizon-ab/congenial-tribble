@@ -31,8 +31,6 @@ author: Bailey Say
 
         document.getElementById("btn").addEventListener("click", function() {
 
-            alert("API has been called");  
-
             const encodedParams = new URLSearchParams();
             let originalText = document.getElementById("inputField").value;
             encodedParams.append("q", originalText);
@@ -53,7 +51,9 @@ author: Bailey Say
             fetch('https://google-translate1.p.rapidapi.com/language/translate/v2', options)
                 .then(response => response.json().then(data => {
                     console.log(data);
+
                     document.getElementById("output").innerHTML = data.translations[0].translatedText;
+                    alert(data.translations[0].translatedText);
                 }))
                 .then(response => console.log(response))
                 .catch(err => console.error(err));
