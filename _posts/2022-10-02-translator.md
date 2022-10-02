@@ -29,9 +29,9 @@ author: Bailey Say
 <script>
 
     function translate() {
-        encodedParams = new URLSearchParams();
+        const encodedParams = new URLSearchParams();
         originalText = document.getElementById("inputField").value;
-        encodedParams.append("q", "whatever");
+        encodedParams.append("q", originalText);
         encodedParams.append("target", "es");
         encodedParams.append("source", "en");
 
