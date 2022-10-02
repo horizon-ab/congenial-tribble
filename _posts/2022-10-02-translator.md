@@ -13,7 +13,7 @@ author: Bailey Say
 
 <body>
     <div class = "description">
-        <p>Please type in the below and press the "translate" button to translate any message from English to Spanish.</p>
+        <p>Please type in the box below and press the "translate" button to translate any message from English to Spanish.</p>
     </div>
     <div class = "input">
         <label>Enter English here: </label>
@@ -50,11 +50,11 @@ author: Bailey Say
             .then(response => response.json().then(data => {
                 console.log(data);
 
-                document.getElementById("output").value = data.translations[0].translatedText;
+                document.getElementById("output").innerHTML = data.translations[0].translatedText;
             }))
             .then(response => console.log(response))
             .catch(err => console.error(err));
-
+        
         }
     
 </script>
