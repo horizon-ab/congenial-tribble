@@ -16,13 +16,46 @@ author: Bailey Say
         <p>Please type in the below and press the "translate" button to translate any message from English to Spanish.</p>
     </div>
     <div class = "input">
-        <label>Enter text here: </label>
-        <input type="text" id="input_field"><br><br>
+        <label>Enter English here: </label>
+        <input type="text" id="inputField"><br><br>
         <button onclick="translate()">Translate!</button><br><br>
     </div>
-
+    <div>
+        <p>Spanish:</p>
+        <p id = "output"></p>
+    </div>
 </body>
 
 <script>
 
+    encodedParams = new URLSearchParams();
+    encodedParams.append("target", "es");
+    encodedParams.append("source", "en");
+
+    function translate() {
+        originalText = document.getElementById("inputField").value;
+        encodedParams.append("q", originalText);
+
+        const options = {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/x-www-form-urlencoded',
+                'Accept-Encoding': 'application/gzip',
+                'X-RapidAPI-Key': '251e7161e9mshbf81a60446c0900p11bbc1jsnb82befaa1258',
+                'X-RapidAPI-Host': 'google-translate1.p.rapidapi.com'
+            },
+            body: encodedParams
+        };
+
+        fetch('https://google-translate1.p.rapidapi.com/language/translate/v2', options)
+            .then(response => response.json().then(data => {
+                console.log(data);
+
+                document.getElementById("output").value = data.translations[0];
+            }))
+            .then(response => console.log(response))
+            .catch(err => console.error(err));
+
+        }
+    
 </script>
