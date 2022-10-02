@@ -51,7 +51,7 @@ author: Bailey Say
             .then(response => response.json().then(data => {
                 console.log(data);
 
-                document.getElementById("output").value = data.translations[0];
+                document.getElementById("output").value = data.translations["translatedText"];
             }))
             .then(response => console.log(response))
             .catch(err => console.error(err));
