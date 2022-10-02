@@ -29,12 +29,11 @@ author: Bailey Say
 
 <script type="text/javascript">
 
-        const encodedParams = new URLSearchParams();
-
         document.getElementById("btn").addEventListener("click", function() {
 
             alert("API has been called");  
 
+            const encodedParams = new URLSearchParams();
             let originalText = document.getElementById("inputField").value;
             encodedParams.append("q", originalText);
             encodedParams.append("target", "es");
