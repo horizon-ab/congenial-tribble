@@ -18,9 +18,9 @@ author: Bailey Say
     <div class = "input">
         <label>Enter English here: </label>
         <input type="text" id="inputField"><br><br>
-        <input type="button" value="Translate!" onclick="translate();"><br><br>
+        <input type="button" id="btn" value="Translate!" onclick="translate();"><br><br>
     </div>
-    <div>
+    <div>   
         <p>Spanish:</p>
         <p id="output">Testing</p>
     </div>
@@ -31,9 +31,9 @@ author: Bailey Say
 
         const encodedParams = new URLSearchParams();
 
-        function translate() {
+        document.getElementById("btn").addEventListener("click", function() {
 
-            alert ("API has been called");  
+            alert("API has been called");  
 
             let originalText = document.getElementById("inputField").value;
             encodedParams.append("q", originalText);
@@ -59,6 +59,6 @@ author: Bailey Say
                 .then(response => console.log(response))
                 .catch(err => console.error(err));
             
-            }
+        });
         
 </script>
