@@ -31,7 +31,7 @@ author: Bailey Say
 
         document.getElementById("btn").addEventListener("click", function() {
 
-            const axios = require("axios");
+            const fetch = require('node-fetch');
             const encodedParams = new URLSearchParams();
             let originalText = document.getElementById("inputField").value;
             encodedParams.append("q", originalText);
