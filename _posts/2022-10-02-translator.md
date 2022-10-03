@@ -32,6 +32,8 @@ author: Bailey Say
         document.getElementById("btn").addEventListener("click", function() {
 
             const fetch = require('node-fetch');
+            const url = 'https://google-translate1.p.rapidapi.com/language/translate/v2';
+
             const encodedParams = new URLSearchParams();
             let originalText = document.getElementById("inputField").value;
             encodedParams.append("q", originalText);
@@ -49,14 +51,14 @@ author: Bailey Say
                 body: encodedParams
             };
 
-            fetch('https://google-translate1.p.rapidapi.com/language/translate/v2', options)
-                .then(response => response.json().then(data => {
+            fetch(url, options)
+                .then(res => res.json().then (data => {
                     console.log(data);
                     document.getElementById("output").innerHTML = data.translations[0].translatedText;
                     alert(data.translations[0].translatedText);
                 }))
-                .then(response => console.log(response))
-                .catch(err => console.error(err));
+                .then(json => console.log(json))
+                .catch(err => console.error('error:' + err));
             
         });
         
