@@ -74,7 +74,7 @@ public class ASCIIConversion extends ImageBlueprint {
 
                 for (int k = 0; k < XLENGTH; k++) {
                     for (int l = 0; l < YLENGTH; l++) {
-                        if (k < img.getWidth() && l < img.getHeight()) {
+                        if ((j + k) < img.getWidth() && (i + l) < img.getHeight()) {
                             counter++;
                             col = new Color(img.getRGB(j + k, i + l));
                             colorSum += (((col.getRed() * 0.30) + (col.getBlue() * 0.59) + (col
