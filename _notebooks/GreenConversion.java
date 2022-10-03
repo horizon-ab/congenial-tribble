@@ -82,8 +82,8 @@ public class GreenConversion extends ImageBlueprint {
     }
 
     public static void main(String[] args) {
-        GreenConversion nicandrohan = new GreenConversion("nicandrohan", "png");
-        nicandrohan.conversion();
+        GreenConversion amogus = new GreenConversion("amogus", "png");
+        amogus.conversion();
     }
 
 }

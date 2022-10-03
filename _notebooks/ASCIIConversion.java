@@ -37,8 +37,8 @@ public class ASCIIConversion extends ImageBlueprint {
     protected void conversion() {
         
         // Controls how big chunks are taken for ASCII characters
-        final int XLENGTH = 1;
-        final int YLENGTH = 2;
+        final int XLENGTH = 2;
+        final int YLENGTH = 4;
 
         BufferedImage img = null;
         PrintWriter asciiPrt = null;
@@ -63,8 +63,8 @@ public class ASCIIConversion extends ImageBlueprint {
         } catch (IOException e) {
         }
 
-        for (int i = 0; i < img.getHeight(); i += 4) {
-            for (int j = 0; j < img.getWidth(); j += 2) {
+        for (int i = 0; i < img.getHeight(); i += YLENGTH) {
+            for (int j = 0; j < img.getWidth(); j += XLENGTH) {
 
                 // colorSum stores total sum of RGB values, counter keeps track of how many are being counted
                 // colorSum/counter = average
@@ -164,7 +164,7 @@ public class ASCIIConversion extends ImageBlueprint {
     }
     
     public static void main(String[] args) {
-        ASCIIConversion amogus = new ASCIIConversion("amogus", "png");
+        ASCIIConversion amogus = new ASCIIConversion("dream", "png");
         amogus.conversion();
     }
 

@@ -82,8 +82,8 @@ public class BlueConversion extends ImageBlueprint {
     }
 
     public static void main(String[] args) {
-        BlueConversion nicandrohan = new BlueConversion("nicandrohan", "png");
-        nicandrohan.conversion();
+        BlueConversion amogus = new BlueConversion("amogus", "png");
+        amogus.conversion();
     }
 
 }

@@ -99,8 +99,8 @@ public class GrayConversion extends ImageBlueprint {
     }
 
     public static void main(String[] args) {
-        GrayConversion nicandrohan = new GrayConversion("nicandrohan", "png");
-        nicandrohan.conversion();
+        GrayConversion amogus = new GrayConversion("amogus", "png");
+        amogus.conversion();
     }
 
 }

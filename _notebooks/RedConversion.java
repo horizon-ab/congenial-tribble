@@ -83,8 +83,8 @@ public class RedConversion extends ImageBlueprint {
     }
 
     public static void main(String[] args) {
-        RedConversion nicandrohan = new RedConversion("nicandrohan", "png");
-        nicandrohan.conversion();
+        RedConversion dream = new RedConversion("dream", "png");
+        dream.conversion();
     }
 
 }
