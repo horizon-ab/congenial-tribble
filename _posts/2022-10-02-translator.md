@@ -55,6 +55,7 @@ author: Bailey Say
             fetch(url, options)
                 .then(res => res.json().then (data => {
                     console.log(data);
+                    console.log(data.translations[0].translatedText);
                     document.getElementById("output").innerHTML = data.translations[0].translatedText;
                     console.log("successful fetch");
                 }))
