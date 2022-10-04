@@ -31,9 +31,8 @@ author: Bailey Say
 
         document.getElementById("btn").addEventListener("click", function() {
             
-            console.log("successful api call");
+            console.log("successful button call");
             
-            const fetch = require('node-fetch');
             const url = 'https://google-translate1.p.rapidapi.com/language/translate/v2';
 
             const encodedParams = new URLSearchParams();
