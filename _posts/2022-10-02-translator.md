@@ -30,7 +30,9 @@ author: Bailey Say
 <script type="text/javascript">
 
         document.getElementById("btn").addEventListener("click", function() {
-
+            
+            console.log("successful api call");
+            
             const fetch = require('node-fetch');
             const url = 'https://google-translate1.p.rapidapi.com/language/translate/v2';
 
@@ -55,7 +57,7 @@ author: Bailey Say
                 .then(res => res.json().then (data => {
                     console.log(data);
                     document.getElementById("output").innerHTML = data.translations[0].translatedText;
-                    alert(data.translations[0].translatedText);
+                    console.log("successful fetch");
                 }))
                 .then(json => console.log(json))
                 .catch(err => console.error('error:' + err));
