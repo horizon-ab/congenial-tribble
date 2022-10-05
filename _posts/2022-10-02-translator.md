@@ -22,7 +22,7 @@ author: Bailey Say
     </div>
     <div>   
         <p>Spanish:</p>
-        <p id="output">Testing</p>
+        <p id="output"></p>
     </div>
 
 </body>
