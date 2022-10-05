@@ -56,7 +56,7 @@ author: Bailey Say
                 .then(res => res.json().then (({ data }) => {
                     console.log(data);
                     console.log(data.translations[0].translatedText);
-                    document.getElementById("output").innerHTML = data.data.translations[0].translatedText;
+                    document.getElementById("output").innerHTML = data.translations[0].translatedText;
                     console.log("successful fetch");
                 }))
                 .then(json => console.log(json))
