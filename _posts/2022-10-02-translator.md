@@ -65,13 +65,3 @@ author: Bailey Say
         });
         
 </script>
-
-{
-    "data": {
-        "translations": [
-            {
-                "translatedText": "ayúdame"
-            }
-        ]
-    }
-}
