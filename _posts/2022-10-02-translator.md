@@ -60,7 +60,7 @@ author: Bailey Say
                     console.log("successful fetch");
                 }))
                 .then(json => console.log(json))
-                .catch(err => console.error('error:'));
+                .catch(err => console.error('error:' + err));
             
         });
         
