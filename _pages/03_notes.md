@@ -16,7 +16,7 @@ For more specific notes, please look at (categories)[https://horizon-ab.github.i
 ## Getting Input
 
 Import Scanner from java and create a new object with it.
-Get input for variables with object.getLine(), object.getBoolean(), object.getInt(), etc.
+Get input for variables with object.nextLine(), object.nextBoolean(), object.nextInt(), etc.
 
 ## Abstract Methods and Classes
 
