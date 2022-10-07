@@ -37,8 +37,8 @@ public class ASCIIConversion extends ImageBlueprint {
     protected void conversion() {
         
         // Controls how big chunks are taken for ASCII characters
-        final int XLENGTH = 2;
-        final int YLENGTH = 4;
+        final int XLENGTH = 1;
+        final int YLENGTH = 2;
 
         BufferedImage img = null;
         PrintWriter asciiPrt = null;
@@ -104,67 +104,67 @@ public class ASCIIConversion extends ImageBlueprint {
     // conversion table, there may be better out there ie https://www.billmongan.com/Ursinus-CS173-Fall2020/Labs/ASCIIArt
     public String asciiChar(double g) {
         String str = " ";
-        // if (g >= 224.6) {
-        //     str = " ";
-        // } else if (g >= 186.6) {
-        //     str = "-";
-        // } else if (g >= 165.5) {
-        //     str = ";";
-        // } else if (g >= 143) {
-        //     str = "(";
-        // } else if (g >= 137.5) {
-        //     str = "<";
-        // } else if (g >= 127.5) {
-        //     str = "L";
-        // } else if (g >= 123.1) {
-        //     str = "1";
-        // } else if (g >= 113.1) {
-        //     str = "n";
-        // } else if (g >= 102) {
-        //     str = "s";
-        // } else if (g >= 85.4) {
-        //     str = "h";
-        // } else if (g >= 75.4) {
-        //     str = "4";
-        // } else if (g >= 69.8) {
-        //     str = "e";
-        // } else if (g >= 62.1) {
-        //     str = "5";
-        // } else if (g >= 51) {
-        //     str = "D";
-        // } else if (g >= 35.5) {
-        //     str = "Q";
-        // } else if (g >= 17.8) {
-        //     str = "M";
-        // } else {
-        //     str = "@";
-        // }
-
-        if (g >= 240) {
+        if (g >= 224.6) {
             str = " ";
-        } else if (g >= 210) {
-            str = ".";
-        } else if (g >= 190) {
-            str = "*";
-        } else if (g >= 170) {
-            str = "+";
-        } else if (g >= 120) {
-            str = "^";
-        } else if (g >= 110) {
-            str = "&";
-        } else if (g >= 80) {
-            str = "8";
-        } else if (g >= 60) {
-            str = "#";
+        } else if (g >= 186.6) {
+            str = "-";
+        } else if (g >= 165.5) {
+            str = ";";
+        } else if (g >= 143) {
+            str = "(";
+        } else if (g >= 137.5) {
+            str = "<";
+        } else if (g >= 127.5) {
+            str = "L";
+        } else if (g >= 123.1) {
+            str = "1";
+        } else if (g >= 113.1) {
+            str = "n";
+        } else if (g >= 102) {
+            str = "s";
+        } else if (g >= 85.4) {
+            str = "h";
+        } else if (g >= 75.4) {
+            str = "4";
+        } else if (g >= 69.8) {
+            str = "e";
+        } else if (g >= 62.1) {
+            str = "5";
+        } else if (g >= 51) {
+            str = "D";
+        } else if (g >= 35.5) {
+            str = "Q";
+        } else if (g >= 17.8) {
+            str = "M";
         } else {
             str = "@";
         }
+
+        // if (g >= 240) {
+        //     str = " ";
+        // } else if (g >= 210) {
+        //     str = ".";
+        // } else if (g >= 190) {
+        //     str = "*";
+        // } else if (g >= 170) {
+        //     str = "+";
+        // } else if (g >= 120) {
+        //     str = "^";
+        // } else if (g >= 110) {
+        //     str = "&";
+        // } else if (g >= 80) {
+        //     str = "8";
+        // } else if (g >= 60) {
+        //     str = "#";
+        // } else {
+        //     str = "@";
+        // }
 
         return str;
     }
     
     public static void main(String[] args) {
-        ASCIIConversion amogus = new ASCIIConversion("dream", "png");
+        ASCIIConversion amogus = new ASCIIConversion("amogus", "png");
         amogus.conversion();
     }
 
