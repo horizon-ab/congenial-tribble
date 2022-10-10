@@ -3,10 +3,10 @@
     
         "post0": {
             "title": "Using Objects",
-            "content": "Iteration in Java . Iteration may be one of the most crucial features for any programming language, as they allow computers to do what they do best: do copious amounts of menial tasks quickly and efficiently. . TODO: . For Loops . TODO: Explain for loops . public class ForLoops { public static void (String[] args) { } } ForLoops.main(null); . While Loops . TODO: Explain while loops . For Each Loops . TODO: Explain for each loops . Stream . TODO: Explain Stream . Hacks . TODO: Caesar Cipher Homework .",
-            "url": "https://horizon-ab.github.io/congenial-tribble/college%20board/units/2022/10/08/unit4iteration.html",
-            "relUrl": "/college%20board/units/2022/10/08/unit4iteration.html",
-            "date": " • Oct 8, 2022"
+            "content": "Iteration in Java . Iteration may be one of the most crucial features for any programming language, since they allow computers to do what they do best: do copious amounts of menial tasks quickly and efficiently. . Of course, Java can also perform iteration using numerous different structures. . For Loops . TODO: Explain for loops . public class ForLoops { public static void (String[] args) { } } ForLoops.main(null); . Hacks . TODO: Basic for loop hacks . While Loops . TODO: Explain while loops . public class WhileLoops { public static void (String[] args) { } } WhileLoops.main(null); . Hacks . TODO: Basic while loop hacks . Nested Iteration . TODO: Explain nested iteration . For Each Loops . TODO: Explain for each loops (these are extra) . public class ForEachLoops { public static void (String[] args) { } } ForEachLoops.main(null); . Stream . TODO: Explain Stream (these are extra) . public class Stream { public static void (String[] args) { } } Stream.main(null); . Final Hacks . TODO: Caesar Cipher Homework .",
+            "url": "https://horizon-ab.github.io/congenial-tribble/college%20board/units/2022/10/09/unit4iteration.html",
+            "relUrl": "/college%20board/units/2022/10/09/unit4iteration.html",
+            "date": " • Oct 9, 2022"
         }
         
     
