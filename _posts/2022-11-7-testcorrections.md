@@ -15,8 +15,8 @@ I got 33/40, which still gets me 100% in the class, but these are the correction
 
 ## Question 22
 
-![Question 22 Part 1](../images/q22p1.png)
-![Question 22 Part 2](../images/q22p2.png)
+![Question 22 Part 1]({{site.baseurl}}/images/q22p1.png)
+![Question 22 Part 2]({{site.baseurl}}/images/q22p2.png)
 
 I got this question wrong because I thought that you had to specify a method would be overriden when creating a 
 new function in the child class with the same method signature as a function in the parent class. However, this
