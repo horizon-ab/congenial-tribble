@@ -29,7 +29,7 @@ access methods that are in the child class.
 
 ## Question 28
 
-![Question 28](../images/q28.png)
+![Question 28]({{site.baseurl}}/images/q28.png)
 
 I'm not exactly sure why I got this wrong, but I think it's because I thought the loop would always run, therefore x would 
 never be equal 1 after the loop, which is false, because n can be given a value less than 2. That's why B is wrong.
@@ -39,8 +39,8 @@ than 2 inside the loop.
 
 ## Question 34
 
-![Question 34 Part 1](../images/q34p1.png)
-![Question 34 Part 2](../images/q34p2.png)
+![Question 34 Part 1]({{site.baseurl}}/images/q34p1.png)
+![Question 34 Part 2]({{site.baseurl}}/images/q34p2.png)
 
 I don't know why I got this question wrong. I realized that I wouldn't work because it never sets the center point and III 
 wouldn't work because the Circle class can't access private attributes, but I still chose the wrong answer. I think I just
@@ -48,7 +48,7 @@ misclicked.
 
 ## Question 35
 
-![Question 35](../images/q35.png)
+![Question 35]({{site.baseurl}}/images/q35.png)
 
 I got this question wrong because I forgot to consider result * 10 in the reassignment of result. I thought that the program 
 simply summed up the digits in the number, which is why I chose 18. But result * 10 actually means that the digits in the 
@@ -56,7 +56,7 @@ number are being switched around, which is why 4752 is the right answer.
 
 ## Question 38
 
-![Question 38](../images/q38.png)
+![Question 38]({{site.baseurl}}/images/q38.png)
 
 I got this question wrong because I forgot to consider that y being greater than 10000 is not necessary for the expression 
 to evaluate to be true. My response does evaluate to true if y > 10000, but I forgot that the other conditions of x < 1500 
@@ -66,7 +66,7 @@ Option A does consider both of these options, which is why it's the correct answ
 
 ## Question 39
 
-![Question 39](../images/q39.png)
+![Question 39]({{site.baseurl}}/images/q39.png)
 
 This question was really hard for me. The double recursion made things super confusing for me, until I realized that the loop 
 of recursion would continue until n was less than or equal to 10. I thought that the answer must be less than 10, which is why 
@@ -75,7 +75,7 @@ right answer.
 
 ## Question 40
 
-![Question 40](../images/q40.png)
+![Question 40]({{site.baseurl}}/images/q40.png)
 
 I didn't realize that the program would print temp instead of the original string, which is why I thought it would still print 
 "WATCH" at the end and not just "WATC". That's why Option C is the right answer and not Option D.
