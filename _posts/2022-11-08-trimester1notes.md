@@ -62,7 +62,7 @@ Our group created the lesson
   - Public, private, protected
   - Data encapsulation
 - Getters and setters
-[Homework]({{site.baseurl}}/2022/10/18/unit2objects.html)
+[Homework]({{site.baseurl}}/2022/10/24/unit5classes.html)
 
 ## Unit 6: Arrays
 
