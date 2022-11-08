@@ -26,6 +26,7 @@ Notes for all of the College Board units covered so far.
   - Convert primitives
 - Operators
   - +, -, *, /, %, //, etc.
+  
 [Homework]({{site.baseurl}}/2022/10/16/unit1primitives.html)
 
 ## Unit 2: Using Objects
@@ -37,6 +38,7 @@ Notes for all of the College Board units covered so far.
 - Static methods vs Non-static methods
   - Can be called by class vs can't be called by class
 - Import external libraries
+  
 [Homework]({{site.baseurl}}/2022/10/18/unit2objects.html)
 
 ## Unit 3: Boolean Expressions and If Statements
@@ -45,6 +47,7 @@ Notes for all of the College Board units covered so far.
 - Evaluates to true or false and converges from then
 - If, else-if, and else
 - De Morgan's Law
+  
 [Homework]({{site.baseurl}}/2022/10/20/unit3booleans.html)
 
 ## Unit 4: Iteration
@@ -52,6 +55,7 @@ Notes for all of the College Board units covered so far.
 - For, while, and for-each loops
 - Infinite loops
 - String manipulation through iteration
+  
 Our group created the lesson
 
 ## Unit 5: Writing Classes
@@ -62,6 +66,7 @@ Our group created the lesson
   - Public, private, protected
   - Data encapsulation
 - Getters and setters
+  
 [Homework]({{site.baseurl}}/2022/10/24/unit5classes.html)
 
 ## Unit 6: Arrays
@@ -71,4 +76,5 @@ Our group created the lesson
 - Traversing arrays
   - Iteration (for, while, and for-each loops)
   - Using algorithms to manipulate each element
+  
 [Homework]({{site.baseurl}}/2022/10/25/unit6arrays.html)
