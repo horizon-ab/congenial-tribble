@@ -37,10 +37,13 @@ url: "https://horizon-ab.github.io" # the base hostname & protocol for your site
 baseurl: "/congenial-tribble" # the subpath of your site, e.g. "/blog".
 
 # Github and twitter are optional:
-minima:
-  social_links:
-    twitter: fastdotai
-    github: fastai
+
+# Jekyll breaks for some weird reason with this stuff
+# https://github.com/jekyll/minima/issues/687
+# minima:
+#   social_links:
+#     twitter: fastdotai
+#     github: fastai
 
 # Set this to true to get LaTeX math equation support
 use_math: 
