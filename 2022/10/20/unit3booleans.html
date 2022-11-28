@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      5 min read
     
 </span></p>
 
@@ -635,6 +635,70 @@ The Average is : 4.0
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Extra-Notes">Extra Notes<a class="anchor-link" href="#Extra-Notes"> </a></h2><h3 id="Truth-Tables">Truth Tables<a class="anchor-link" href="#Truth-Tables"> </a></h3><p><img src="https://www.realdigital.org/img/228d4788d26e286b5706f6d644ddee8b.svg" alt="Truth Tables" /></p>
+<p>Can be used to visualize boolean conditionals</p>
+<h3 id="De-Morgan's-Law">De Morgan's Law<a class="anchor-link" href="#De-Morgan's-Law"> </a></h3><p>De Morgan's Law is a bit more mathematical in nature, dealing with set theory, so I'll try my best to describe it here.</p>
+<p>De Morgan's Law basically explains how certain boolean statements can be rewritten as different expressions, yet essentially be the same. 
+More specifically, it states that "The complement of the union of two sets is the same as the intersection of their complements" or "The 
+complement of the intersection of two sets is the same as the union of their complements".</p>
+<p>What the heck does that mean? An easier way to think about it would be like this:</p>
+<ul>
+<li>not (A or B) = (not A) and (not B)</li>
+<li>not (A and B) = (not A) or (not B)</li>
+</ul>
+<p>In a more formalalized, mathematical way:</p>
+<p><img src="https://siwimulyoto.files.wordpress.com/2012/11/dmorgan-law2.gif" alt="Set Theory Stuff" /></p>
+<p>But even with all that text, it's still pretty confusing, right? So it's probably best to visualize it using an actual image. This one 
+I found online pretty much summarizes it best:</p>
+<p><img src="https://www.onlinemathlearning.com/image-files/de-morgans-law.png" alt="More Set Theory Stuff" /></p>
+<p>The green shaded area is basically what's being covered in each equality. Both sides cover the same thing.</p>
+<p>Finally, let's go through an example of how this would apply in code. Essentially, we'll use a few variables to make a whole bunch of complicated 
+boolean statements that actually mean the same exact thing:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">deMorgansLaw</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">boolean</span> <span class="n">a</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="kt">boolean</span> <span class="n">b</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+        <span class="c1">// These two statements are exactly equal according to De Morgan&#39;s law</span>
+        <span class="c1">// In this case, the only way to yield an output of true would be to have both a and b to be false (change it to check)</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">a</span> <span class="o">||</span> <span class="n">b</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="o">!</span><span class="n">a</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">b</span><span class="p">);</span>
+
+        <span class="kt">boolean</span> <span class="n">c</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="kt">boolean</span> <span class="n">d</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+        <span class="c1">// These two statements are also exactly equal according to De Morgan&#39;s Law</span>
+        <span class="c1">// In this case, the only way to yield an output of false would be to have both c and d to be true (change it to check)</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">c</span> <span class="o">&amp;&amp;</span> <span class="n">d</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="o">!</span><span class="n">c</span> <span class="o">||</span> <span class="o">!</span><span class="n">d</span><span class="p">);</span>
+        
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">deMorgansLaw</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
