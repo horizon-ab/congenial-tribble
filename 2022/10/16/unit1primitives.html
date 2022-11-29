@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      3 min read
     
 </span></p>
 
@@ -277,6 +277,90 @@ window.onload = wrap_img;
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Extra-Notes">Extra Notes<a class="anchor-link" href="#Extra-Notes"> </a></h2><h3 id="Casting">Casting<a class="anchor-link" href="#Casting"> </a></h3><p>Casting is a method of forcefully changing the data type of data, though it won't work in every instance. For instance, a String (obviously) cannot be converted into an int, but an int can be converted into a String.</p>
+<p>There are many uses for casting. When dividing with integers, results are automatically truncuated into whole numbers, which can be annoying for many reasons. However, when the integers are casted into doubles, then the result will be a double with the correct accuracy. On the other hand, sometimes truncuated integer results are required from doubles, and the solution is to cast the result into an int.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// Division</span>
+<span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">((</span><span class="kt">double</span><span class="p">)(</span><span class="n">num1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="kt">double</span><span class="p">)(</span><span class="n">num2</span><span class="p">));</span>
+
+<span class="c1">// Truncuation/Rounding</span>
+<span class="kt">double</span> <span class="n">num3</span> <span class="o">=</span> <span class="mf">5.0</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">num4</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">((</span><span class="kt">int</span><span class="p">)(</span><span class="n">num3</span> <span class="o">/</span> <span class="n">num4</span><span class="p">));</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1.3333333333333333
+2
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Wrapper-Classes">Wrapper Classes<a class="anchor-link" href="#Wrapper-Classes"> </a></h3><p>When it's more useful to turn a primitive datatype into an object (like for parsing and stuff), wrapper classes are used for each of the primitives:</p>
+<ul>
+<li>Integer for int</li>
+<li>Long for long</li>
+<li>Float for float</li>
+<li>Double for double</li>
+<li>Boolean for boolean</li>
+<li>Character for char</li>
+</ul>
+<p>Some instances where wrapper classes are required include the use of ArrayLists, which can only store objects. Therefore, all primitive datatypes stored must be converted into their wrapper class equivalents:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Character</span><span class="o">&gt;</span> <span class="n">list2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Character</span><span class="o">&gt;</span><span class="p">();</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 

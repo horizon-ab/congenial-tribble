@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      6 min read
     
 </span></p>
 
@@ -644,7 +644,7 @@ The Average is : 4.0
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Extra-Notes">Extra Notes<a class="anchor-link" href="#Extra-Notes"> </a></h2><h3 id="Truth-Tables">Truth Tables<a class="anchor-link" href="#Truth-Tables"> </a></h3><p><img src="https://www.realdigital.org/img/228d4788d26e286b5706f6d644ddee8b.svg" alt="Truth Tables" /></p>
-<p>Can be used to visualize boolean conditionals</p>
+<p>Truth tables can be used to visualize boolean conditionals. They're useful for evaluating basic boolean expressions as well as more complicated compound boolean expressions, which use multiple kinds of boolean operators inside each other.</p>
 <h3 id="De-Morgan's-Law">De Morgan's Law<a class="anchor-link" href="#De-Morgan's-Law"> </a></h3><p>De Morgan's Law is a bit more mathematical in nature, dealing with set theory, so I'll try my best to describe it here.</p>
 <p>De Morgan's Law basically explains how certain boolean statements can be rewritten as different expressions, yet essentially be the same. 
 More specifically, it states that "The complement of the union of two sets is the same as the intersection of their complements" or "The 
@@ -660,8 +660,8 @@ complement of the intersection of two sets is the same as the union of their com
 I found online pretty much summarizes it best:</p>
 <p><img src="https://www.onlinemathlearning.com/image-files/de-morgans-law.png" alt="More Set Theory Stuff" /></p>
 <p>The green shaded area is basically what's being covered in each equality. Both sides cover the same thing.</p>
-<p>Finally, let's go through an example of how this would apply in code. Essentially, we'll use a few variables to make a whole bunch of complicated 
-boolean statements that actually mean the same exact thing:</p>
+<p>Finally, let's go through an example of how this would apply in code. Essentially, we'll use a few variables to make a whole bunch of complicated compounded
+boolean expressions that actually mean the same exact thing:</p>
 
 </div>
 </div>
@@ -699,6 +699,97 @@ boolean statements that actually mean the same exact thing:</p>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>false
+false
+true
+true
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Comparison-of-Various-Datatypes">Comparison of Various Datatypes<a class="anchor-link" href="#Comparison-of-Various-Datatypes"> </a></h3><h4 id="Numbers">Numbers<a class="anchor-link" href="#Numbers"> </a></h4><p>Numbers such as integers, doubles, and floats can be compared using operators found in basic math such as:</p>
+<ul>
+<li>==</li>
+<li>!=</li>
+<li>&lt;</li>
+<li>&gt;</li>
+<li>&lt;=</li>
+<li>&gt;=</li>
+</ul>
+<h3 id="Strings">Strings<a class="anchor-link" href="#Strings"> </a></h3><p>Strings can be compared using the String method .equals() which checks if the objects that calls and is called are equal to each other (based on the alphanumeric contents of both)</p>
+<h3 id="Objects">Objects<a class="anchor-link" href="#Objects"> </a></h3><p>Objects can be compared with two different methods, equals() (similar to comparing Strings) and hashCode(). Without overriding any methods, equals() checks if the two objects are equal using "==" operator (which checks if the object references point to the same object) and hashCode() generates a unique ID for each object to check if two objects are the same. In a more practical sense, both equals() and hashCode() should be overriden to better match the specific class being used.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// Numbers</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="mi">4</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="mi">5</span> <span class="o">!=</span> <span class="mi">5</span><span class="p">);</span>
+
+<span class="c1">// Strings</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hello World&quot;</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;Hello World&quot;</span><span class="p">));</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Code Code Code&quot;</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;code code code&quot;</span><span class="p">));</span>
+
+<span class="c1">// Objects</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Name</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">first</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Name</span><span class="p">(</span><span class="n">String</span> <span class="n">first</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">first</span> <span class="o">=</span> <span class="n">first</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">Name</span> <span class="n">name1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Name</span><span class="p">(</span><span class="s">&quot;Bailey&quot;</span><span class="p">);</span>
+<span class="n">Name</span> <span class="n">name2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Name</span><span class="p">(</span><span class="s">&quot;Bailey&quot;</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">name1</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">name2</span><span class="p">));</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">name1</span><span class="p">.</span><span class="na">hashCode</span><span class="p">()</span> <span class="o">==</span> <span class="n">name2</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>true
+false
+true
+false
+false
+false
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
