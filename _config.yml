@@ -40,10 +40,9 @@ baseurl: "/congenial-tribble" # the subpath of your site, e.g. "/blog".
 
 # Jekyll breaks for some weird reason with this stuff
 # https://github.com/jekyll/minima/issues/687
-# minima:
-#   social_links:
-#     twitter: fastdotai
-#     github: fastai
+minima:
+  social_links:
+    - { platform: github, user_url: "https://github.com/horizon-ab" }
 
 # Set this to true to get LaTeX math equation support
 use_math: 
