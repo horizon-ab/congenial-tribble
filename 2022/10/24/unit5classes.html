@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      4 min read
     
 </span></p>
 
@@ -389,21 +389,72 @@ window.onload = wrap_img;
 <h3 id="Accessors-and-Mutators">
 <a class="anchor" href="#Accessors-and-Mutators" aria-hidden="true"><span class="octicon octicon-link"></span></a>Accessors and Mutators<a class="anchor-link" href="#Accessors-and-Mutators"> </a>
 </h3>
+<p>Accessor methods (called getters) allow code outside of the class to access private variables. They're public methods that return private attributes, allowing the class to control access to its private attributes.</p>
+<p>Mutator methods (called setters) allow code outside of the class to change private variables. They're public methods that take in a parameter (the new value) and return nothing, allowing the class to control outside code changing its private attributes.</p>
 <h3 id="Static-variables-and-methods">
 <a class="anchor" href="#Static-variables-and-methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Static variables and methods<a class="anchor-link" href="#Static-variables-and-methods"> </a>
 </h3>
+<p>Static variables (also known as class variables) are variables that are shared by the entire class, meaning that it will be the same for every instance of an object. It's useful for when certain attributes need to be standardized for an entire class (i.e. any object of a quadrilateral class must have the number of sides set equal to 4).</p>
+<p>Static methods (also known as class methods) are methods that can be called using the class itself (along with objects of the class). Essentially, they make it easy for outside code to call certain methods specific to a class without having to instantiate a new object every single time, which can be seen in common imported Java classes such as Math.</p>
 <h3 id="Access-modifiers">
 <a class="anchor" href="#Access-modifiers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Access modifiers<a class="anchor-link" href="#Access-modifiers"> </a>
 </h3>
 <h3 id="This">
 <a class="anchor" href="#This" aria-hidden="true"><span class="octicon octicon-link"></span></a>This<a class="anchor-link" href="#This"> </a>
 </h3>
+<p>The keyword "this" inside classes means that the object will reference itself as the called object, meaning that the class can make self references even before having any objects created. The most common usage of this can be seen inside of constructors, where attributes are self-referenced to instantiate values.</p>
 <h3 id="Main-method-vs.-Tester-methods">
 <a class="anchor" href="#Main-method-vs.-Tester-methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Main method vs. Tester methods<a class="anchor-link" href="#Main-method-vs.-Tester-methods"> </a>
 </h3>
+<p>The Main method is the method which starts the entire program along will all of its associated files. This is what actually starts the program and all of its components. Tester methods are usually public static void main(String[] args) methods inside of all the other classes in order to test that certain features inside of each class are working. As such, they are not called when the main method is run and only serves to make sure everything works.</p>
+
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Rhombus</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="n">sides</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">double</span><span class="o">[]</span> <span class="n">angles</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Rhombus</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="kt">double</span><span class="o">[]</span> <span class="n">angles</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">angles</span> <span class="o">=</span> <span class="n">angles</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">getSides</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">sides</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Rhombus</span> <span class="n">timmy</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Rhombus</span><span class="p">(</span><span class="s">"Tim"</span><span class="p">,</span> <span class="k">new</span> <span class="kt">double</span><span class="o">[]</span><span class="p">{</span><span class="mi">90</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">90</span><span class="p">});</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">Rhombus</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
