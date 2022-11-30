@@ -84,8 +84,10 @@ Our group created the [lesson](https://nicm2.github.io/macromonkeys_blog/college
 
 ## Unit 7: ArrayLists
 
+- Dynamic data structure from imported class ArrayList
+- Use Wrapper classes (in generics) to store primitive datatypes
 
-
+[Homework]({{site.baseurl}}/2022/11/30/unit7arraylists.html)
 ## Unit 8: 2D Arrays
 
 
