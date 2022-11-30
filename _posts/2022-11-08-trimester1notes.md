@@ -55,8 +55,11 @@ Notes for all of the College Board units covered so far.
 - For, while, and for-each loops
 - Infinite loops
 - String manipulation through iteration
+- Do-While Loops
+  - Have the condition at the very end of the loop
+  - The loop is always run at least once (unlike while loops)
   
-Our group created the lesson
+Our group created the [lesson](https://nicm2.github.io/macromonkeys_blog/college%20board/units/2022/10/10/unit4iteration.html)
 
 ## Unit 5: Writing Classes
 
@@ -78,3 +81,18 @@ Our group created the lesson
   - Using algorithms to manipulate each element
   
 [Homework]({{site.baseurl}}/2022/10/25/unit6arrays.html)
+
+## Unit 7: ArrayLists
+
+
+
+## Unit 8: 2D Arrays
+
+
+
+## Unit 9: Inheritance
+
+- Classes are allowed to inherit attributes and methods from other classes using the "extends" keyword
+
+## Unit 10: Recursion
+
