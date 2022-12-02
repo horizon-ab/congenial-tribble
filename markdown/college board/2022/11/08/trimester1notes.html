@@ -270,7 +270,11 @@ window.onload = wrap_img;
   </li>
   <li>Polymorphism
     <ul>
-      <li>Child class can be treated as an instance of its parent class (although it won’t be able to access its own methods this way)</li>
+      <li>Child class can be treated as an instance of its parent class (referencing superclass of object)
+        <ul>
+          <li>Child won’t be able to access its own methods this way</li>
+        </ul>
+      </li>
       <li>Methods can be overriden with new definitions
         <ul>
           <li>@Override keyword</li>
@@ -281,9 +285,9 @@ window.onload = wrap_img;
           <li>Same name, different parameters</li>
         </ul>
       </li>
-      <li>
     </ul>
   </li>
+  <li>Late binding - Methods are searched for by the compiler during runtime, not during the compilation of the code.</li>
   <li>Abstract class + methods
     <ul>
       <li>Abstraction</li>
@@ -291,11 +295,28 @@ window.onload = wrap_img;
       <li>Abstract methods originally only have their signature created and must be fully established in the child class definition</li>
     </ul>
   </li>
+  <li>Standard methods - methods inherited from the original Object class
+    <ul>
+      <li>toString() - will usually print out the memory address of an object, can be overriden to print more specific information about the object in question</li>
+      <li>equals() - checks if two objects are equal using “==” (which checks if the two memory addresses point to the same object); can also be overriden for more specific terms of being equal</li>
+      <li>hashCode() - generates a unique numeric ID for each object, which can be used to check if they’re equal to one another; can also be overriden for more specific terms</li>
+    </ul>
+  </li>
 </ul>
 
 <h2 id="unit-10-recursion">
 <a class="anchor" href="#unit-10-recursion" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unit 10: Recursion</h2>
 
+<ul>
+  <li>Big O Notation - function used to represent the run time of certain algorithms and functions
+    <ul>
+      <li>Hash Maps - O(1) (in most cases)</li>
+      <li>Binary Search - O(log(n))</li>
+      <li>Single Loop - O(n)</li>
+      <li>Nested Loop - O(n^2)</li>
+    </ul>
+  </li>
+</ul>
 
   </div><!-- from https://github.com/utterance/utterances -->
 <script src="https://utteranc.es/client.js"
