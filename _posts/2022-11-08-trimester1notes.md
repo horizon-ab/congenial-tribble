@@ -99,16 +99,26 @@ Our group created the [lesson](https://nicm2.github.io/macromonkeys_blog/college
 - super() can be used to call methods (and constructors) from the parent class inside the child class
   - Subclass constructor can use super() to quickly set attributes originally from the parent class
 - Polymorphism
-  - Child class can be treated as an instance of its parent class (although it won't be able to access its own methods this way)
+  - Child class can be treated as an instance of its parent class (referencing superclass of object)
+    - Child won't be able to access its own methods this way
   - Methods can be overriden with new definitions
     - @Override keyword
   - Methods can be overloaded with different function signatures
     - Same name, different parameters
-  - 
+- Late binding - Methods are searched for by the compiler during runtime, not during the compilation of the code.
 - Abstract class + methods
   - Abstraction
   - Cannot create an object from it directly, must be created using a child class inheriting from the abstract class
   - Abstract methods originally only have their signature created and must be fully established in the child class definition
+- Standard methods - methods inherited from the original Object class
+  - toString() - will usually print out the memory address of an object, can be overriden to print more specific information about the object in question
+  - equals() - checks if two objects are equal using "==" (which checks if the two memory addresses point to the same object); can also be overriden for more specific terms of being equal
+  - hashCode() - generates a unique numeric ID for each object, which can be used to check if they're equal to one another; can also be overriden for more specific terms
 
 ## Unit 10: Recursion
 
+- Big O Notation - function used to represent the run time of certain algorithms and functions
+  - Hash Maps - O(1) (in most cases)
+  - Binary Search - O(log(n))
+  - Single Loop - O(n)
+  - Nested Loop - O(n^2)
