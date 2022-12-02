@@ -95,6 +95,20 @@ Our group created the [lesson](https://nicm2.github.io/macromonkeys_blog/college
 ## Unit 9: Inheritance
 
 - Classes are allowed to inherit attributes and methods from other classes using the "extends" keyword
+  - Class inheriting is the child class, class being inherited from is the parent class
+- super() can be used to call methods (and constructors) from the parent class inside the child class
+  - Subclass constructor can use super() to quickly set attributes originally from the parent class
+- Polymorphism
+  - Child class can be treated as an instance of its parent class (although it won't be able to access its own methods this way)
+  - Methods can be overriden with new definitions
+    - @Override keyword
+  - Methods can be overloaded with different function signatures
+    - Same name, different parameters
+  - 
+- Abstract class + methods
+  - Abstraction
+  - Cannot create an object from it directly, must be created using a child class inheriting from the abstract class
+  - Abstract methods originally only have their signature created and must be fully established in the child class definition
 
 ## Unit 10: Recursion
 
