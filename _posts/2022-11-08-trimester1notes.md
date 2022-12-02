@@ -66,7 +66,9 @@ Our group created the [lesson](https://nicm2.github.io/macromonkeys_blog/college
 - Creation of classes
   - Constructors (overloading)
 - Access modifiers
-  - Public, private, protected
+  - Public - everything can access the class
+  - private - only the class itself + instances of it can access the class
+  - protected - only the class itself along with child classes + instances of either can access the class
   - Data encapsulation
 - Getters and setters
   
