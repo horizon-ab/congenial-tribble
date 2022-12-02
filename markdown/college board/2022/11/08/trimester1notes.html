@@ -82,7 +82,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -258,7 +258,39 @@ window.onload = wrap_img;
 <a class="anchor" href="#unit-9-inheritance" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unit 9: Inheritance</h2>
 
 <ul>
-  <li>Classes are allowed to inherit attributes and methods from other classes using the “extends” keyword</li>
+  <li>Classes are allowed to inherit attributes and methods from other classes using the “extends” keyword
+    <ul>
+      <li>Class inheriting is the child class, class being inherited from is the parent class</li>
+    </ul>
+  </li>
+  <li>super() can be used to call methods (and constructors) from the parent class inside the child class
+    <ul>
+      <li>Subclass constructor can use super() to quickly set attributes originally from the parent class</li>
+    </ul>
+  </li>
+  <li>Polymorphism
+    <ul>
+      <li>Child class can be treated as an instance of its parent class (although it won’t be able to access its own methods this way)</li>
+      <li>Methods can be overriden with new definitions
+        <ul>
+          <li>@Override keyword</li>
+        </ul>
+      </li>
+      <li>Methods can be overloaded with different function signatures
+        <ul>
+          <li>Same name, different parameters</li>
+        </ul>
+      </li>
+      <li>
+    </ul>
+  </li>
+  <li>Abstract class + methods
+    <ul>
+      <li>Abstraction</li>
+      <li>Cannot create an object from it directly, must be created using a child class inheriting from the abstract class</li>
+      <li>Abstract methods originally only have their signature created and must be fully established in the child class definition</li>
+    </ul>
+  </li>
 </ul>
 
 <h2 id="unit-10-recursion">
