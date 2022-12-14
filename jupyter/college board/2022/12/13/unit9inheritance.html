@@ -4,21 +4,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Inheritance | fastpages</title>
+<title>Unit 9 - Inheritance | fastpages</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Inheritance" />
+<meta property="og:title" content="Unit 9 - Inheritance" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<link rel="canonical" href="https://horizon-ab.github.io/congenial-tribble/2022/12/13/unit9inheritance.html" />
-<meta property="og:url" content="https://horizon-ab.github.io/congenial-tribble/2022/12/13/unit9inheritance.html" />
+<meta name="description" content="Unit 9 of APCSA, focusing on inheritance between classes" />
+<meta property="og:description" content="Unit 9 of APCSA, focusing on inheritance between classes" />
+<link rel="canonical" href="https://horizon-ab.github.io/congenial-tribble/jupyter/college%20board/2022/12/13/unit9inheritance.html" />
+<meta property="og:url" content="https://horizon-ab.github.io/congenial-tribble/jupyter/college%20board/2022/12/13/unit9inheritance.html" />
 <meta property="og:site_name" content="fastpages" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-12-13T00:00:00-06:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Inheritance" />
+<meta property="twitter:title" content="Unit 9 - Inheritance" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-12-13T00:00:00-06:00","datePublished":"2022-12-13T00:00:00-06:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Inheritance","mainEntityOfPage":{"@type":"WebPage","@id":"https://horizon-ab.github.io/congenial-tribble/2022/12/13/unit9inheritance.html"},"url":"https://horizon-ab.github.io/congenial-tribble/2022/12/13/unit9inheritance.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-12-13T00:00:00-06:00","datePublished":"2022-12-13T00:00:00-06:00","description":"Unit 9 of APCSA, focusing on inheritance between classes","headline":"Unit 9 - Inheritance","mainEntityOfPage":{"@type":"WebPage","@id":"https://horizon-ab.github.io/congenial-tribble/jupyter/college%20board/2022/12/13/unit9inheritance.html"},"url":"https://horizon-ab.github.io/congenial-tribble/jupyter/college%20board/2022/12/13/unit9inheritance.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/congenial-tribble/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://horizon-ab.github.io/congenial-tribble/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/congenial-tribble/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -73,7 +73,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Inheritance</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-12-13T00:00:00-06:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Unit 9 - Inheritance</h1><p class="page-description">Unit 9 of APCSA, focusing on inheritance between classes</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-12-13T00:00:00-06:00" itemprop="datePublished">
         Dec 13, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -83,6 +83,16 @@ window.onload = wrap_img;
     
 </span></p>
 
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/congenial-tribble/categories/#jupyter">jupyter</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/congenial-tribble/categories/#college board">college board</a>
+        
+      
+      </p>
     
 
     
@@ -116,7 +126,10 @@ window.onload = wrap_img;
       </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <!--
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Hacks-1-3">Hacks 1-3 </a></li>
+<li class="toc-entry toc-h2"><a href="#Notes">Notes </a></li>
+</ul><!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
@@ -125,9 +138,12 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Hacks-1-3">Hacks 1-3<a class="anchor-link" href="#Hacks-1-3"> </a></h2>
+<h2 id="Hacks-1-3">
+<a class="anchor" href="#Hacks-1-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks 1-3<a class="anchor-link" href="#Hacks-1-3"> </a>
+</h2>
 </div>
 </div>
 </div>
@@ -150,11 +166,11 @@ window.onload = wrap_img;
 
     <span class="c1">// Two different methods called sayHello, but with different constructors (or method signatures)</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sayHello</span><span class="p">()</span> <span class="p">{</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;I am a bottle&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"I am a bottle"</span><span class="p">);</span>
     <span class="p">}</span>
 
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sayHello</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;I am a bottle called &quot;</span> <span class="o">+</span> <span class="n">name</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"I am a bottle called "</span> <span class="o">+</span> <span class="n">name</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
@@ -170,13 +186,13 @@ window.onload = wrap_img;
     <span class="c1">// Overriding a method</span>
     <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sayHello</span><span class="p">()</span> <span class="p">{</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;I am a water bottle&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"I am a water bottle"</span><span class="p">);</span>
     <span class="p">}</span>
 
     <span class="c1">// Overriding a method</span>
     <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sayHello</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;I am a water bottle called &quot;</span> <span class="o">+</span> <span class="n">name</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"I am a water bottle called "</span> <span class="o">+</span> <span class="n">name</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -188,9 +204,13 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Notes">Notes<a class="anchor-link" href="#Notes"> </a></h2><ul>
+<h2 id="Notes">
+<a class="anchor" href="#Notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes<a class="anchor-link" href="#Notes"> </a>
+</h2>
+<ul>
 <li>Classes are allowed to inherit attributes and methods from other classes using the "extends" keyword<ul>
 <li>Class inheriting is the child class, class being inherited from is the parent class</li>
 </ul>
@@ -236,7 +256,15 @@ window.onload = wrap_img;
 
 
 
-  </div><a class="u-url" href="/congenial-tribble/2022/12/13/unit9inheritance.html" hidden></a>
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="horizon-ab/congenial-tribble"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/congenial-tribble/jupyter/college%20board/2022/12/13/unit9inheritance.html" hidden></a>
 </article>
 
       </div>
