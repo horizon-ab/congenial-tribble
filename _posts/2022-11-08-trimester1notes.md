@@ -107,7 +107,7 @@ Our group created the [lesson](https://nicm2.github.io/macromonkeys_blog/college
     - @Override keyword
   - Methods can be overloaded with different function signatures
     - Same name, different parameters
-- Late binding - Methods are searched for by the compiler during runtime, not during the compilation of the code.
+- Late binding - Methods are searched for by the compiler during runtime, not during the compilation of the code. Think about overriding the method
 - Abstract class + methods
   - Abstraction
   - Cannot create an object from it directly, must be created using a child class inheriting from the abstract class
