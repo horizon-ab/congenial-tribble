@@ -92,7 +92,10 @@ Our group created the [lesson](https://nicm2.github.io/macromonkeys_blog/college
 [Homework]({{site.baseurl}}/java/labs/2022/11/30/unit7arraylists.html)
 ## Unit 8: 2D Arrays
 
+- 2D Arrays have 2 dimensions instead of just 1
+- Use nested for loops to iterate through each array
 
+[Homework](../_notebooks/2022-12-06-unit82darrays.ipynb)
 
 ## Unit 9: Inheritance
 
@@ -116,6 +119,8 @@ Our group created the [lesson](https://nicm2.github.io/macromonkeys_blog/college
   - toString() - will usually print out the memory address of an object, can be overriden to print more specific information about the object in question
   - equals() - checks if two objects are equal using "==" (which checks if the two memory addresses point to the same object); can also be overriden for more specific terms of being equal
   - hashCode() - generates a unique numeric ID for each object, which can be used to check if they're equal to one another; can also be overriden for more specific terms
+
+[Homework](../_notebooks/2022-12-13-unit9inheritance.ipynb)
 
 ## Unit 10: Recursion
 
