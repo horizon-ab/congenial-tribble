@@ -1,6 +1,6 @@
 ---
-title: Trimester 1 Notes (Units 1-6)
-description: Notes on all of the units covered so far
+title: Trimester 1 Notes (Units 1-10)
+description: Notes on all of the units covered
 toc: true
 comments: true
 layout: post
@@ -10,7 +10,7 @@ author: Bailey Say
 
 # Trimester 1 Notes
 
-Notes for all of the College Board units covered so far.
+Notes for all of the College Board units covered in CSA.
 
 ## Unit 1: Primitive Types
 
