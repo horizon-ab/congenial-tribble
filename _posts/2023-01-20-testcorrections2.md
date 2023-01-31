@@ -7,10 +7,6 @@ layout: post
 categories: [markdown, college board]
 author: Bailey Say
 ---
-
-## Overall Score
-
-1.8 + 0.92 = 2.72
 ## 52 Question Test
 
 Score: 50/52
