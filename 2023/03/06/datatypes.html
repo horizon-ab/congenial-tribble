@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      12 min read
+      15 min read
     
 </span></p>
 
@@ -130,7 +130,13 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#Personal-Hacks">Personal Hacks </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#Early-Seed">Early Seed </a></li>
-<li class="toc-entry toc-h3"><a href="#Small-Code-Exerices">Small Code Exerices </a></li>
+<li class="toc-entry toc-h3"><a href="#Small-Code-Exercises">Small Code Exercises </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Exploring-AP-Classroom">Exploring AP Classroom </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Datatypes">Datatypes </a></li>
+<li class="toc-entry toc-h3"><a href="#Methods-and-Control-Structures">Methods and Control Structures </a></li>
 </ul>
 </li>
 </ul><!--
@@ -609,9 +615,202 @@ Main method after changeAtomicInteger(n): n = 15 hash code = 747820531
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Small-Code-Exerices">
-<a class="anchor" href="#Small-Code-Exerices" aria-hidden="true"><span class="octicon octicon-link"></span></a>Small Code Exerices<a class="anchor-link" href="#Small-Code-Exerices"> </a>
+<h3 id="Small-Code-Exercises">
+<a class="anchor" href="#Small-Code-Exercises" aria-hidden="true"><span class="octicon octicon-link"></span></a>Small Code Exercises<a class="anchor-link" href="#Small-Code-Exercises"> </a>
 </h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">PrimitiveExample</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="o">&lt;</span><span class="n">E</span><span class="o">&gt;</span> <span class="n">E</span> <span class="nf">sort</span><span class="p">(</span><span class="n">E</span> <span class="n">element</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">intArray</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[]</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">};</span>
+        
+        <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">integerArray</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">intArray</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">integerArray</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">Integer</span><span class="p">(</span><span class="n">intArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">));</span>
+        <span class="p">}</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">integerArray</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">PrimitiveExample</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[3, 4, 2, 6, 1, 8, 4, 5, 9, 1, 2]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exploring-AP-Classroom">
+<a class="anchor" href="#Exploring-AP-Classroom" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exploring AP Classroom<a class="anchor-link" href="#Exploring-AP-Classroom"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">FrogSimulation</span>
+<span class="p">{</span>
+    <span class="cm">/** Distance, in inches, from the starting position to the goal. */</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">goalDistance</span><span class="p">;</span>
+
+    <span class="cm">/** Maximum number of hops allowed to reach the goal. */</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">maxHops</span><span class="p">;</span>
+
+    <span class="cm">/** Constructs a FrogSimulation where dist is the distance, in inches, from the starting</span>
+<span class="cm">    * position to the goal, and numHops is the maximum number of hops allowed to reach the goal.</span>
+<span class="cm">    * Precondition: dist &gt; 0; numHops &gt; 0</span>
+<span class="cm">    */</span>
+    <span class="kd">public</span> <span class="nf">FrogSimulation</span><span class="p">(</span><span class="kt">int</span> <span class="n">dist</span><span class="p">,</span> <span class="kt">int</span> <span class="n">numHops</span><span class="p">)</span>
+    <span class="p">{</span>
+    <span class="n">goalDistance</span> <span class="o">=</span> <span class="n">dist</span><span class="p">;</span>
+    <span class="n">maxHops</span> <span class="o">=</span> <span class="n">numHops</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/** Returns an integer representing the distance, in inches, to be moved when the frog hops.</span>
+<span class="cm">     */</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="nf">hopDistance</span><span class="p">()</span>
+    <span class="p">{</span> <span class="cm">/* implementation not shown */</span> 
+
+        <span class="c1">// Int datatype used because steps should be whole numbers</span>
+        <span class="k">return</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">20</span><span class="p">)</span> <span class="o">-</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/** Simulates a frog attempting to reach the goal as described in part (a).</span>
+<span class="cm">    * Returns true if the frog successfully reached or passed the goal during the simulation;</span>
+<span class="cm">    * false otherwise.</span>
+<span class="cm">    */</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">simulate</span><span class="p">()</span>
+    <span class="p">{</span> <span class="cm">/* to be implemented in part (a) */</span> 
+        <span class="kt">int</span> <span class="n">distance</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="c1">// if control structures catch any return conditions being met</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">maxHops</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">distance</span> <span class="o">+=</span> <span class="n">hopDistance</span><span class="p">();</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">distance</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">distance</span> <span class="o">&gt;=</span> <span class="n">goalDistance</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/** Runs num simulations and returns the proportion of simulations in which the frog</span>
+<span class="cm">    * successfully reached or passed the goal.</span>
+<span class="cm">    * Precondition: num &gt; 0</span>
+<span class="cm">    */</span>
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">runSimulations</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span>
+    <span class="p">{</span> <span class="cm">/* to be implemented in part (b) */</span> 
+
+        <span class="c1">// Note the usage of the double datatype here</span>
+        <span class="c1">// When doubles are operated on with ints, the result is an integer</span>
+        <span class="kt">double</span> <span class="n">trueResults</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+
+            <span class="c1">// if control structure differentiates between successful and unsuccessful simulations</span>
+            <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">simulate</span><span class="p">())</span> <span class="p">{</span>
+                <span class="n">trueResults</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="c1">// Here a double and int are operated on together, resulting in another double</span>
+        <span class="k">return</span> <span class="n">trueResults</span> <span class="o">/</span> <span class="n">num</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">FrogSimulation</span> <span class="n">test</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FrogSimulation</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">test</span><span class="p">.</span><span class="na">simulate</span><span class="p">());</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">test</span><span class="p">.</span><span class="na">runSimulations</span><span class="p">(</span><span class="mi">100</span><span class="p">));</span>
+    <span class="p">}</span>
+<span class="p">}</span> 
+
+<span class="n">FrogSimulation</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>false
+0.01
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Datatypes">
+<a class="anchor" href="#Datatypes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Datatypes<a class="anchor-link" href="#Datatypes"> </a>
+</h3>
+<p>There are 2 main datatypes present in the above code, which are:</p>
+<ul>
+<li>ints</li>
+<li>doubles</li>
+</ul>
+<p>Certain datatypes are better suited than others to model a situation; since the situation includes the distance per hop, the maximum distance, and the max number of hops are all whole numbers, ints are preferrable to use here.</p>
+<p>However, considering the output of runSimulations() being a ratio, a different datatype would be better suited: a double.</p>
+<h3 id="Methods-and-Control-Structures">
+<a class="anchor" href="#Methods-and-Control-Structures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Methods and Control Structures<a class="anchor-link" href="#Methods-and-Control-Structures"> </a>
+</h3>
+<p>Control structures form the building blocks of most methods, allowing them to handle simple tasks such as filtering or calculating. In this case, the main methods are simulate() and runSimulations().</p>
+<p>simulate() utilizes both for loops, in order to iterate through the hops and their effect on distance, and if loops, in order to check if any one of the return conditions are met (negative distance, max hops, or reached distance).</p>
+<p>runSimulations() also takes advantage of for loops in order to run simulate() numerous times, using an if statement to distinguish between successful and unsuccessful simulations.</p>
+
 </div>
 </div>
 </div>
