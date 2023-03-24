@@ -184,7 +184,16 @@ window.onload = wrap_img;
     <span class="p">}</span>
 
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sort</span><span class="p">()</span> <span class="p">{</span>
-    
+        
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">list</span><span class="p">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">list</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">list</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">list</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="kt">int</span> <span class="n">tmp</span> <span class="o">=</span> <span class="n">list</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+                    <span class="n">list</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">list</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+                    <span class="n">list</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">tmp</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
     <span class="p">}</span>
 
     <span class="kd">public</span> <span class="kt">int</span><span class="o">[]</span> <span class="nf">get</span><span class="p">()</span> <span class="p">{</span>
@@ -215,7 +224,7 @@ window.onload = wrap_img;
 
     <span class="kd">private</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">list</span><span class="p">;</span>
 
-    <span class="n">SelectionSort</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">list</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">MergeSort</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">list</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">this</span><span class="p">.</span><span class="na">list</span> <span class="o">=</span> <span class="n">list</span><span class="p">;</span>
     <span class="p">}</span>
 
@@ -236,9 +245,21 @@ window.onload = wrap_img;
 
         <span class="n">BubbleSort</span> <span class="n">bubbleTest</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BubbleSort</span><span class="p">(</span><span class="n">testArray</span><span class="p">);</span>
         <span class="n">bubbleTest</span><span class="p">.</span><span class="na">sort</span><span class="p">();</span>
-        <span class="kt">int</span><span class="o">[]</span> <span class="n">sortedArray</span> <span class="o">=</span> <span class="n">bubbleTest</span><span class="p">.</span><span class="na">get</span><span class="p">();</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">num</span> <span class="p">:</span> <span class="n">sortedArray</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">sortedBubble</span> <span class="o">=</span> <span class="n">bubbleTest</span><span class="p">.</span><span class="na">get</span><span class="p">();</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Bubble Sort"</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">num</span> <span class="p">:</span> <span class="n">sortedBubble</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">num</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+
+        <span class="n">SelectionSort</span> <span class="n">selectionTest</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SelectionSort</span><span class="p">(</span><span class="n">testArray</span><span class="p">);</span>
+        <span class="n">selectionTest</span><span class="p">.</span><span class="na">sort</span><span class="p">();</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">sortedSelection</span> <span class="o">=</span> <span class="n">selectionTest</span><span class="p">.</span><span class="na">get</span><span class="p">();</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Selection Sort"</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">num</span> <span class="p">:</span> <span class="n">sortedSelection</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">num</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -256,17 +277,10 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>1
-2
-3
-3
-4
-5
-6
-6
-8
-9
-</pre>
+<pre>Bubble Sort
+1 2 3 3 4 5 6 6 8 9 
+Selection Sort
+1 2 3 3 4 5 6 6 8 9 </pre>
 </div>
 </div>
 
