@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      7 min read
     
 </span></p>
 
@@ -173,7 +173,7 @@ window.onload = wrap_img;
 <h3 id="Example-of-Linked-List,-Queues,-and-Stacks">
 <a class="anchor" href="#Example-of-Linked-List,-Queues,-and-Stacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example of Linked List, Queues, and Stacks<a class="anchor-link" href="#Example-of-Linked-List,-Queues,-and-Stacks"> </a>
 </h3>
-<p>Also includes code challenge 1</p>
+<p>Also includes code challenge 1, 4, and 5</p>
 
 </div>
 </div>
@@ -405,6 +405,43 @@ window.onload = wrap_img;
     <span class="p">}</span>
 <span class="p">}</span>
 
+<span class="kd">class</span> <span class="nc">Stack</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">top</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Stack</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">push</span><span class="p">(</span><span class="n">T</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Could cause problems, not sure???</span>
+        <span class="n">top</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">top</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">T</span> <span class="nf">pop</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">T</span> <span class="n">value</span> <span class="o">=</span> <span class="n">top</span><span class="p">.</span><span class="na">getData</span><span class="p">();</span>
+        <span class="n">top</span> <span class="o">=</span> <span class="n">top</span><span class="p">.</span><span class="na">getPrev</span><span class="p">();</span>
+        <span class="k">return</span> <span class="n">value</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">T</span> <span class="nf">peek</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">top</span><span class="p">.</span><span class="na">getData</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">current</span> <span class="o">=</span> <span class="n">top</span><span class="p">;</span>
+        <span class="n">String</span> <span class="n">result</span> <span class="o">=</span> <span class="s">"(top) -&gt; "</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">current</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">result</span> <span class="o">+=</span> <span class="s">"NULL + -&gt; "</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">current</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">result</span> <span class="o">+=</span> <span class="n">current</span><span class="p">.</span><span class="na">getData</span><span class="p">()</span> <span class="o">+</span> <span class="s">" -&gt; "</span><span class="p">;</span>
+            <span class="n">current</span> <span class="o">=</span> <span class="n">current</span><span class="p">.</span><span class="na">getPrev</span><span class="p">();</span>
+        <span class="p">}</span> 
+        <span class="n">result</span> <span class="o">+=</span> <span class="s">"(bottom)"</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
 <span class="cm">/**</span>
 <span class="cm"> * Driver Class</span>
 <span class="cm"> * Tests queue with string, integers, and mixes of Classes and types</span>
@@ -414,13 +451,39 @@ window.onload = wrap_img;
     <span class="p">{</span>
         <span class="c1">// Create iterable Queue of Words</span>
         <span class="c1">// Challenge 1</span>
-        <span class="n">Object</span><span class="o">[]</span> <span class="n">words</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[]</span> <span class="p">{</span> <span class="s">"seven"</span><span class="p">,</span> <span class="s">"slimy"</span><span class="p">,</span> <span class="s">"snakes"</span><span class="p">,</span> <span class="s">"sallying"</span><span class="p">,</span> <span class="s">"slowly"</span><span class="p">,</span> <span class="s">"slithered"</span><span class="p">,</span> <span class="s">"southward"</span><span class="p">};</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Challenge 1:"</span><span class="p">);</span>
+        <span class="n">String</span><span class="o">[]</span> <span class="n">words</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[]</span> <span class="p">{</span> <span class="s">"seven"</span><span class="p">,</span> <span class="s">"slimy"</span><span class="p">,</span> <span class="s">"snakes"</span><span class="p">,</span> <span class="s">"sallying"</span><span class="p">,</span> <span class="s">"slowly"</span><span class="p">,</span> <span class="s">"slithered"</span><span class="p">,</span> <span class="s">"southward"</span><span class="p">};</span>
         <span class="n">QueueManager</span> <span class="n">qWords</span> <span class="o">=</span> <span class="k">new</span> <span class="n">QueueManager</span><span class="p">(</span><span class="s">"Words"</span><span class="p">,</span> <span class="n">words</span> <span class="p">);</span>
         <span class="n">qWords</span><span class="p">.</span><span class="na">printQueue</span><span class="p">();</span>
 
         <span class="k">while</span> <span class="p">(</span><span class="n">qWords</span><span class="p">.</span><span class="na">delete</span><span class="p">()</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">qWords</span><span class="p">.</span><span class="na">printQueue</span><span class="p">();</span>
         <span class="p">}</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"------------------------------------------------------------------------"</span><span class="p">);</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Challenge 4"</span><span class="p">);</span>
+        <span class="n">Stack</span> <span class="n">wordStack</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">word</span> <span class="p">:</span> <span class="n">words</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">wordStack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">word</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">wordStack</span><span class="p">);</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"------------------------------------------------------------------------"</span><span class="p">);</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Challenge 5"</span><span class="p">);</span>
+        <span class="n">Stack</span> <span class="n">team</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="p">();</span>
+        <span class="n">String</span><span class="o">[]</span> <span class="n">members</span> <span class="o">=</span> <span class="p">{</span><span class="s">"Bailey"</span><span class="p">,</span> <span class="s">"Don"</span><span class="p">,</span> <span class="s">"Evan"</span><span class="p">,</span> <span class="s">"Nathan"</span><span class="p">,</span> <span class="s">"Rohit"</span><span class="p">,</span> <span class="s">"Jun"</span><span class="p">,</span> <span class="s">"Hetvi"</span><span class="p">,</span> <span class="s">"Iris"</span><span class="p">,</span> <span class="s">"Ellen"</span><span class="p">,</span> <span class="s">"Sahil"</span><span class="p">,</span> <span class="s">"Samuel"</span><span class="p">,</span> <span class="s">"Everitt"</span><span class="p">};</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">member</span> <span class="p">:</span> <span class="n">members</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">team</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">member</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">team</span><span class="p">);</span>
+
+        <span class="n">team</span><span class="p">.</span><span class="na">pop</span><span class="p">();</span>
+        <span class="n">team</span><span class="p">.</span><span class="na">pop</span><span class="p">();</span>
+        <span class="n">team</span><span class="p">.</span><span class="na">pop</span><span class="p">();</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">team</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="n">QueueTester</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
@@ -436,7 +499,8 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Words count: 7
+<pre>Challenge 1:
+Words count: 7
 Words data: seven slimy snakes sallying slowly slithered southward 
 Words count: 6
 Words data: slimy snakes sallying slowly slithered southward 
@@ -452,6 +516,13 @@ Words count: 1
 Words data: southward 
 Words count: 0
 Words data: 
+------------------------------------------------------------------------
+Challenge 4
+(top) -&gt; southward -&gt; slithered -&gt; slowly -&gt; sallying -&gt; snakes -&gt; slimy -&gt; seven -&gt; (bottom)
+------------------------------------------------------------------------
+Challenge 5
+(top) -&gt; Everitt -&gt; Samuel -&gt; Sahil -&gt; Ellen -&gt; Iris -&gt; Hetvi -&gt; Jun -&gt; Rohit -&gt; Nathan -&gt; Evan -&gt; Don -&gt; Bailey -&gt; (bottom)
+(top) -&gt; Ellen -&gt; Iris -&gt; Hetvi -&gt; Jun -&gt; Rohit -&gt; Nathan -&gt; Evan -&gt; Don -&gt; Bailey -&gt; (bottom)
 </pre>
 </div>
 </div>

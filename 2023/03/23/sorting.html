@@ -249,21 +249,23 @@ window.onload = wrap_img;
     <span class="p">}</span>
 
     <span class="c1">// This crap doesn't work</span>
-    <span class="c1">// public void merge(int[] arr1, int[] arr2) {</span>
-    <span class="c1">//     int[] merged = new int[arr1.length + arr2.length];</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">merge</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr1</span><span class="p">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">arr2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">merged</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">arr1</span><span class="p">.</span><span class="na">length</span> <span class="o">+</span> <span class="n">arr2</span><span class="p">.</span><span class="na">length</span><span class="o">]</span><span class="p">;</span>
 
-    <span class="c1">//     merged[0] = arr1[0];</span>
+        <span class="n">merged</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="n">arr1</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span>
 
-    <span class="c1">//     for (int i = 1; i &lt; arr1.length; i++) {</span>
-    <span class="c1">//         for (int j = 0; j &lt; arr1.length; j++) {</span>
-    <span class="c1">//             merged[j + 1] = merged[j];</span>
-    <span class="c1">//             merged[j] = arr1[j];</span>
-    <span class="c1">//         }</span>
-    <span class="c1">//     }</span>
-    <span class="c1">//     for (int i = 0; i &lt; arr2.length; i++) [</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">arr1</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">arr1</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">merged</span><span class="o">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">merged</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+                <span class="n">merged</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">arr1</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">arr2</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            
+        <span class="p">}</span>
 
-    <span class="c1">//     ]</span>
-    <span class="c1">// }</span>
+        
+    <span class="p">}</span>
 
     <span class="kd">public</span> <span class="kt">int</span><span class="o">[]</span> <span class="nf">get</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="n">list</span><span class="p">;</span>
