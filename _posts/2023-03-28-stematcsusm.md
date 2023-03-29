@@ -1,6 +1,6 @@
 ---
 title: Technical Business Panel
-description: Notes + Summary on business panel
+description: Notes + Summary on CSU presentation
 toc: true
 comments: true
 layout: post
