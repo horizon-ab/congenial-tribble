@@ -245,16 +245,26 @@ window.onload = wrap_img;
     <span class="p">}</span>
 
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sort</span><span class="p">()</span> <span class="p">{</span>
-    
+        <span class="k">return</span> <span class="n">mergeSort</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">list</span><span class="p">);</span>
     <span class="p">}</span>
 
-    <span class="c1">// This crap doesn't work</span>
-    <span class="kd">public</span> <span class="kt">int</span><span class="o">[]</span> <span class="nf">merge</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr1</span><span class="p">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">arr2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kt">int</span><span class="o">[]</span> <span class="nf">mergeSort</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">list</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">list</span><span class="p">.</span><span class="na">length</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">list</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">mergeSort</span><span class="p">(</span><span class="n">merge</span><span class="p">())</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span><span class="o">[]</span> <span class="nf">merge</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr1</span><span class="p">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">arr2</span><span class="p">,</span> <span class="kt">boolean</span> <span class="n">minimized</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">minimized</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="p">}</span>
+        
         <span class="kt">int</span><span class="o">[]</span> <span class="n">merged</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">arr1</span><span class="p">.</span><span class="na">length</span> <span class="o">+</span> <span class="n">arr2</span><span class="p">.</span><span class="na">length</span><span class="o">]</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">ind1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">ind2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-
 
         <span class="k">while</span> <span class="p">(</span><span class="n">arr1</span><span class="p">.</span><span class="na">length</span> <span class="o">!=</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">arr2</span><span class="p">.</span><span class="na">length</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
             
@@ -340,15 +350,15 @@ window.onload = wrap_img;
 
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Unsorted Array
-3 6 1 4 3 9 8 5 6 2 
-Bubble Sort
-1 2 3 3 4 5 6 6 8 9 
-Selection Sort
-1 2 3 3 4 5 6 6 8 9 
-Insertion Sort
-1 2 3 3 4 5 6 6 8 9 
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        return </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">mergeSort(this.list)</span><span class="ansi-black-intense-fg ansi-bold">;</span>
+<span class="ansi-red-intense-fg ansi-bold">incompatible types: unexpected return value</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    public int[] mergeSort(int[] list) </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">{</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">        </span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">    }</span>
+<span class="ansi-red-intense-fg ansi-bold">missing return statement</span>
 </pre>
 </div>
 </div>
