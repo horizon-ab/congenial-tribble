@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      4 min read
     
 </span></p>
 
@@ -367,6 +367,73 @@ Is t2 ready to remove? true
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Car2</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">make</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">model</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">year</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">double</span> <span class="n">price</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">result</span><span class="p">;</span>
+    <span class="c1">// Constructor</span>
+    <span class="kd">public</span> <span class="nf">Car2</span><span class="p">(</span><span class="n">String</span> <span class="n">make2</span><span class="p">,</span> <span class="n">String</span> <span class="n">model2</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year2</span><span class="p">,</span> <span class="kt">double</span> <span class="n">price2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">make</span> <span class="o">=</span> <span class="n">make2</span><span class="p">;</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">mode12</span><span class="p">;</span>
+    <span class="n">year</span> <span class="o">=</span> <span class="n">yearz</span><span class="p">;</span>
+    <span class="n">price</span> <span class="o">=</span> <span class="n">price2</span><span class="p">;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="s">&quot;The car is an affordable car.&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="c1">// Getter methods</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getMake</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">make</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getModel</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">model</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getYear</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">year</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getPrice</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">price</span><span class="p">;</span>
+    <span class="p">}</span>
+        <span class="c1">// Method to determine if the car is affordable or not</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isAffordable</span> <span class="p">(</span><span class="kt">double</span> <span class="n">budget</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">price</span> <span class="o">&lt;=</span> <span class="n">budget</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="kd">public</span> <span class="n">String</span> <span class="nf">classification</span><span class="p">(</span><span class="kt">double</span> <span class="n">cost</span><span class="p">){</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">cost</span><span class="o">&gt;</span><span class="mi">50000</span><span class="p">){</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="s">&quot;The car is a luxury car.&quot;</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">cost</span><span class="o">&gt;</span><span class="mi">30000</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="s">&quot;The car is a mid-range car.&quot;</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span><span class="p">{</span>
+        <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+        <span class="p">}</span>
+    
+<span class="p">}</span>
+        <span class="c1">//Main method</span>
+        <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Create a new Car object</span>
+        <span class="n">Car2</span> <span class="n">myCar</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Car2</span><span class="p">(</span><span class="s">&quot;Toyota&quot;</span><span class="p">,</span> <span class="s">&quot;Camry&quot;</span><span class="p">,</span> <span class="mi">2019</span><span class="p">,</span> <span class="mf">25000.0</span><span class="p">);</span>
+        <span class="p">}</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
